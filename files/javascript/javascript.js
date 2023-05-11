@@ -1,11 +1,30 @@
 let hamburger = document.getElementById("navIconHitbox");
-let isRotated = false;
+const mobileNavigation = document.getElementById("MobileNavigation");
+let isOpened = false;
 
-hamburger.addEventListener("click", function() {
-  if (isRotated) {
-    hamburger.style.transform = "translate(0,0) rotate(90deg);";
-  } else {
-    hamburger.style.transform = "translate(0,0) rotate(0deg);";
+
+function navOpenClose(){
+  if (isOpened) {
+    const mobileNavigation = document.getElementById("MobileNavigation");
+    mobileNavigation.classList.remove("flex-display");
+    mobileNavigation.classList.add("hidden");
   }
-  isRotated = !isRotated;
-});
+  else
+  {
+    const mobileNavigation = document.getElementById("MobileNavigation");
+    mobileNavigation.classList.remove("hidden");
+    mobileNavigation.classList.add("flex-display"); 
+  }
+  isOpened = !isOpened;
+}
+
+function goToHTML(id) {
+  if (id != 999) {
+    const windowKey = ("window" + id + ".html");
+    window.location.href = windowKey;
+  }
+  else {
+    window.location.href = ("e-portfolio.html");
+  }
+
+}

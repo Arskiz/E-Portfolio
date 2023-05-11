@@ -1,16 +1,19 @@
 /*---------------------------------- Body, ja muut tärkeät jutut ----------------------------------*/
 .E-Portfolio-Body{
-    background-color: rgb(119, 119, 255);
+    background-color: rgb(0, 0, 0);
     margin: 0;
+    
 }
 
 .header{
-    background-color: rgb(161, 161, 255);
+    display: flex;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
 }
 
 .header p {
     margin: 0;
-    border: 2px solid black; /* reunat DEBUG */
+
 }
 
 /* Ylä- ja alaosa */
@@ -22,7 +25,6 @@
 /* Vasen ja oikea osa */
 .flexbox-left-right-container {
     display: flex;
-
     justify-content: space-between;
     align-items: stretch;
     text-align: center;
@@ -30,8 +32,8 @@
 
 /* Itemit */
 .flex-left-item {
-    background-color: #ffffff;
-    border-right: 1px solid black;
+    background-color: #cdcdcd;
+    border-right: 2px solid rgb(136, 136, 136);
     flex-basis: 15%;
 }
 
@@ -48,7 +50,7 @@
 }
 
 .flex-up-down-item{
-    background-color: rgb(161, 161, 255);
+    background-color: rgb(136, 136, 136);
     border: none;
     flex-basis: 100%;
 }
@@ -85,9 +87,10 @@
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
+    text-align: center;
 }
 
-.textRight{
+.textRight {
     margin: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -95,14 +98,17 @@
 }
 
 /*---------------------------------- Muut interaktiiviset jutut, Nappulat, kirjoitushommat etc.. ----------------------------------*/
-.headerItems{
+.headerItems {
     display: flex;
-    padding: 10px;
     align-items: center;
     justify-content: space-between;
 }
 
-.headerItemsMobile{
+.headerItems p {
+    padding: 10px;
+}
+
+.headerItemsMobile {
     display: none;
     padding: 10px;
     align-items: center;
@@ -110,21 +116,23 @@
 }
 
 .headerButton {
-    background-color: rgb(119, 119, 255);
-    border: 2px solid #3838ff;
-    border-radius: 10px;
-    color: #4040ff;
+    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: rgb(80, 80, 80);
     transition-property: background-color;
     transition-duration: 0.1s;
-    margin: 1px
+    width: 100%;
+    height: 100%;
 }
 
 .headerButton:hover {
-    background-color: rgb(151, 151, 255);
+    background-color: rgb(83, 83, 83);
+    color: rgb(159, 159, 159);
 }
 
 .headerButton:active {
-    background-color: rgb(185, 185, 255);
+    background-color: rgb(69, 69, 69);
 }
 
 #navIconHitbox {
@@ -132,10 +140,64 @@
     transition-duration: 0.5s;
 }
 
+.hr{
+    height: 2px;
+    width: 85%;
+    border: none;
+    background-color: rgb(136, 136, 136);;
+}
+
+#MobileNavigation {
+    z-index: 9999;
+    position: fixed;
+    background-color: grey;
+    border-radius: 10px;
+    border: 2px solid rgb(176, 176, 176);
+    top: 11%;
+    left: 60%;
+    right: 1%;
+    justify-content: center;
+}
+#MobileNavigation div{
+    border-radius: 10px;
+    border: 1px solid rgb(176, 176, 176);
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    background-color: rgb(106, 106, 106);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+#MobileNavigation div:hover{
+    border-radius: 10px;
+    border: 1px solid rgb(176, 176, 176);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(160, 160, 160);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+  
+
+.hidden {
+display: none;
+}
+  
+.flex-display {
+display: flex;
+}
+  
 
 
 
-@media (max-width: 768px) {
+
+@media (min-width: 800px){
+    #MobileNavigation{
+        display: none;
+    }
+}
+@media (max-width: 800px) {
     .flexbox-left-right-container {
       flex-direction: column;
       align-items: center;
@@ -145,6 +207,7 @@
       width: 100%;
       border-right: none;
       border-bottom: 1px solid black;
+      border-top: 1px solid black;
     }
     
     .textTitle {
@@ -161,18 +224,18 @@
     }
 
     .headerItemsMobile {
-        display: flex;
+      display: flex;
     }
-    
+
     .headerButton {
       margin: 10px 0;
     }
+    
+    
+
   }
   
   @media (max-width: 480px) {
-    .textTitle {
-      font-size: 30px;
-    }
     
   }
   
