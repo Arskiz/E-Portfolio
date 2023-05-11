@@ -1,0 +1,111 @@
+.E-Portfolio-Body{
+    background-color: rgb(119, 119, 255);
+    transition-property: all;
+    width: 100%;
+    margin: 0px;
+    transition-duration: 1s;
+}
+
+.header{
+    background-color: rgb(161, 161, 255);
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* Ylä- ja alaosa */
+.flexbox-up-down-container{
+    display: flex;
+    text-align: center;
+}
+
+/* Vasen ja oikea osa */
+.flexbox-left-right-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+  
+/* Itemit */
+.flex-left-item { /* vasen ja oikea flexbox */
+    background-color: #ffffff;
+    border-right: 1px solid black;
+        /* border: 1px solid #444444;
+        width: 15%; */
+}
+.flex-right-item{
+    background-color: #c7b7b7;
+    border: none;
+    width: 100%; /* adjust the width of each item */
+}
+
+.flex-middle-item { /* Iso  keskihomma*/
+    background-color: #ffffff;
+    border: none;
+    width: 100%;
+}
+
+.flex-up-down-item{ /* ylä ja ala flexbox */
+    background-color: rgb(161, 161, 255);
+    border: none;
+    width: 100%;
+}
+
+/* Keski Itemit */
+.left-right-item-left{
+
+}
+.left-right-item-middle{
+
+}
+.left-right-item-right{
+
+}
+
+/* Tekstit */
+.textCenter{
+    margin: 10px;
+    font-size: large;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+.textCenterBIG{
+    font-weight: bold;
+    margin: 10px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+.textCenterTitle{
+    font-weight: bold;
+    margin: 10px;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+}
+.textLeftTitle{
+    font-weight: bold;
+    margin: 10px;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    text-align: left;
+}
+.textLeft{ 
+    margin: 5px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-align: left;
+}
+.textRight{
+    margin: 5px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-align: right;
+}
