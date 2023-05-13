@@ -1,14 +1,14 @@
 /*---------------------------------- Body, ja muut tärkeät jutut ----------------------------------*/
-.E-Portfolio-Body{
-    background-color: rgb(0, 0, 0);
+.E-Portfolio-Body {
+    background-color: rgb(10, 0, 13);
     margin: 0;
-    
+
 }
 
-.header{
+.header {
     display: flex;
     width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(10, 0, 13);
 }
 
 .header p {
@@ -16,8 +16,14 @@
 
 }
 
+.selected {
+    color: rgb(199, 199, 199);
+    padding-bottom: 1px;
+    border-bottom: 2px solid grey;
+}
+
 /* Ylä- ja alaosa */
-.flexbox-up-down-container{
+.flexbox-up-down-container {
     display: flex;
     text-align: center;
 }
@@ -37,7 +43,7 @@
     flex-basis: 15%;
 }
 
-.flex-right-item{
+.flex-right-item {
     background-color: #c7b7b7;
     border: none;
     flex-basis: 100%;
@@ -49,24 +55,27 @@
     flex-basis: 100%;
 }
 
-.flex-up-down-item{
+.flex-up-down-item {
     background-color: rgb(136, 136, 136);
     border: none;
     flex-basis: 100%;
 }
 
 /* Keski Itemit */
-.left-right-item-left{
+.left-right-item-left {
+    background-color: rgb(11, 11, 11);
 }
 
-.left-right-item-middle{
+.left-right-item-middle {
+    background-color: rgb(11, 11, 11);
 }
 
-.left-right-item-right{
+.left-right-item-right {
+    background-color: rgb(11, 11, 11);
 }
 
 /*---------------------------------- Tekstit ----------------------------------*/
-.textTitle{
+.textTitle {
     font-weight: bold;
     font-size: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -75,14 +84,16 @@
     white-space: nowrap;
 }
 
-.textLeft{ 
-    margin: 5px;
+.textLeft {
+    padding-left: 10px;
+    padding-right: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
+    font-size: 20px;
     text-align: left;
 }
 
-.textCenter{
+.textCenter {
     margin: 10px;
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
@@ -98,10 +109,14 @@
 }
 
 /*---------------------------------- Muut interaktiiviset jutut, Nappulat, kirjoitushommat etc.. ----------------------------------*/
+.textContent {
+    background-color: rgb(25, 0, 32);
+}
+
 .headerItems {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
 }
 
 .headerItems p {
@@ -117,7 +132,7 @@
 
 .headerButton {
     display: inline-block;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(10, 0, 13);
     border: none;
     color: rgb(80, 80, 80);
     transition-property: background-color;
@@ -127,12 +142,12 @@
 }
 
 .headerButton:hover {
-    background-color: rgb(83, 83, 83);
+    background-color: rgb(16, 0, 21);
     color: rgb(159, 159, 159);
 }
 
 .headerButton:active {
-    background-color: rgb(69, 69, 69);
+    background-color: rgb(24, 0, 31);
 }
 
 #navIconHitbox {
@@ -140,102 +155,289 @@
     transition-duration: 0.5s;
 }
 
-.hr{
+.hr {
     height: 2px;
     width: 85%;
     border: none;
-    background-color: rgb(136, 136, 136);;
+    background-color: rgb(136, 136, 136);
+    ;
 }
+
+
 
 #MobileNavigation {
     z-index: 9999;
     position: fixed;
-    background-color: grey;
+    background-color: rgb(54, 54, 54);
     border-radius: 10px;
-    border: 2px solid rgb(176, 176, 176);
-    top: 11%;
-    left: 60%;
-    right: 1%;
+    border: 2px solid rgb(0, 0, 0);
+    top: 0%;
+    left: 50%;
+    right: 0%;
+    bottom: 0%;
     justify-content: center;
 }
-#MobileNavigation div{
-    border-radius: 10px;
-    border: 1px solid rgb(176, 176, 176);
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 5px;
-    background-color: rgb(106, 106, 106);
+
+#exitButton {
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(89, 89, 89);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     transition-property: background-color;
     transition-duration: 0.2s;
 }
 
-#MobileNavigation div:hover{
+#exitButtonDIV {
+    z-index: 9999;
+    position: fixed;
+    top: calc(0.1%);
+    right: calc(0.1%);
+}
+
+#exitButton:hover {
+    display: inline-block;
+    border: 2px solid black;
+    background-color: rgb(67, 67, 67);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#MobileNavigation #MobNavTitle {
+    color: white;
+    font-size: 30px;
+}
+
+#MobileNavigation #buttonDiv {
     border-radius: 10px;
     border: 1px solid rgb(176, 176, 176);
-    margin-top: 5px;
+
+    margin-bottom: 5px;
+    background-color: rgb(106, 106, 106);
+    border: 1px solid black;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+#MobileNavigation #buttonDiv:hover {
+    border-radius: 10px;
+    border: 1px solid rgb(176, 176, 176);
     margin-bottom: 5px;
     background-color: rgb(160, 160, 160);
     transition-property: background-color;
     transition-duration: 0.2s;
 }
-  
+
+#MobileNavigation #buttonDivSelected {
+    border-radius: 10px;
+    border: 1px solid rgb(176, 176, 176);
+
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid black;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+#MobileNavigation #buttonDivSelected:hover {
+    border-radius: 10px;
+    border: 1px solid rgb(176, 176, 176);
+    margin-bottom: 5px;
+    background-color: rgb(160, 160, 160);
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.ButtonNaVMobile {
+    z-index: 9999;
+    position: fixed;
+    left: calc(50% + 10px);
+    right: calc(0% + 10px);
+}
+
+.MobNav_Title_And_ExitButton {
+    display: flex;
+    align-items: center;
+}
 
 .hidden {
-display: none;
+    display: none;
 }
-  
+
 .flex-display {
-display: flex;
+    display: flex;
 }
-  
+
+.contactMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactMeForm {
+    border: 4px solid rgb(36, 36, 36);
+    background-color: rgb(85, 85, 85);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.formButton {
+    padding: 5px;
+    border-radius: 10px;
+    border: 4px solid rgb(36, 36, 36);
+    background-color: white;
+    transition-property: background-color;
+    transition-duration: 0.4s;
+}
+
+.formButton:hover {
+    background-color: rgb(130, 130, 130);
+}
+
+.formButton:active {
+    background-color: rgb(79, 79, 79);
+}
+
+.formInput{
+    border-radius: 5px;
+    border: 4px solid rgb(36, 36, 36);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: white;
+    
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+.formInput:hover{
+    border-radius: 10px;
+    background-color: rgb(179, 179, 179);
+}
+
+.form-row {
+    display: flex;
+    color: rgb(208, 208, 208);
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+}
 
 
 
 
-@media (min-width: 800px){
-    #MobileNavigation{
+@media (max-width: 560px) {
+    #exitButtonDIV {
+        position: relative;
+    }
+
+    .contactMe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contactMeForm {
+        display: inline-block;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 470px) {
+    #MobileNavigation #MobNavTitle {
+        font-size: 20px;
+        padding-left: 5px;
+    }
+
+    #exitButtonDIV {
+        position: relative;
+    }
+
+    #MobileNavigation {
+        z-index: 9999;
+        position: fixed;
+        background-color: rgb(54, 54, 54);
+        border-radius: 10px;
+        border: 2px solid rgb(0, 0, 0);
+        top: 0%;
+        left: 40%;
+        right: 0%;
+        bottom: 0%;
+        justify-content: center;
+    }
+
+    .ButtonNaVMobile {
+        z-index: 9999;
+        position: fixed;
+        left: calc(40% + 10px);
+        right: calc(0% + 10px);
+    }
+}
+
+@media (min-width: 800px) {
+    #MobileNavigation {
         display: none;
     }
 }
+
 @media (max-width: 800px) {
     .flexbox-left-right-container {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .flex-left-item {
-      width: 100%;
-      border-right: none;
-      border-bottom: 1px solid black;
-      border-top: 1px solid black;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
     }
-    
+
     .textTitle {
-      font-size: 30px;
+        font-size: 30px;
     }
-    
+
     .textCenter {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .headerItems {
-      display: none;
+        display: none;
     }
 
     .headerItemsMobile {
-      display: flex;
+        display: flex;
     }
 
     .headerButton {
-      margin: 10px 0;
+        margin: 10px 0;
     }
-    
-    
 
-  }
-  
-  @media (max-width: 480px) {
-    
-  }
-  
+
+
+}
+
+@media (max-width: 480px) {}

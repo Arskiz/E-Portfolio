@@ -17,10 +17,10 @@
 
         <!-- Title -->
         <img src="../images/logo.png" alt="logo" id="homeButton" width="100px" height="100px" onclick="goToHTML(999)">
-        <div class="headerItems" alt="headerin napit ja muut">    
+        <div class="headerItems" alt="headerin napit ja muut">
             <!-- Buttons -->
             <button class="headerButton" id="headerButtonInfo" onclick="goToHTML(1)">
-                <h1 class="textCenter" style="white-space: nowrap;">About Me</h1>
+                <h1 class="textCenter selected" style="white-space: nowrap;">About Me</h1>
             </button>
             <button class="headerButton" id="headerButtonKnowledge" onclick="goToHTML(2)">
                 <h1 class="textCenter" style="white-space: nowrap;">Knowledge</h1>
@@ -28,8 +28,8 @@
             <button class="headerButton" id="headerButton3" onclick="goToHTML(3)">
                 <h1 class="textCenter" style="white-space: nowrap;">Professions</h1>
             </button>
-            <button class="headerButton" id="headerButton4" onclick="goToHTML(4)">
-                <h1 class="textCenter" style="white-space: nowrap;">My History At Coding</h1>
+            <button class="headerButton" id="headerButton3" onclick="goToHTML(4)">
+                <h1 class="textCenter" style="white-space: nowrap;">Contact Me</h1>
             </button>
         </div>
 
@@ -38,40 +38,84 @@
             <p class="textTitle" style="size: 10px"></p>
             <!-- Hamburger-Menu-Button -->
             <div id="navIconHitbox" onclick="navOpenClose()">
-                <img src="../images/dropdown-white.png" id="navIcon" alt="navIcon" >
+                <img src="../images/dropdown-white.png" id="navIcon" alt="navIcon">
             </div>
-            
+
 
         </div>
     </header>
 
 
-        <!-- Keski Iso-Flexbox -->
-        <div class="flex-middle-item left-right-item-middle" style="background-color: rgb(11, 11, 11);">
-            <div class="textContent">
-                <p class="textCenter" style="font-size: 20px; padding: 10px;  color: grey;">About Me</p>
-            </div>
-        </div>
+    <!-- Keski Iso-Flexbox -->
+    <div class="flex-middle-item left-right-item-middle">
+        <div class="textContent">
+            <p class="textTitle" style="color: grey;">About Me:</p>
+            <p class="textLeft" style="color: grey;">
+                Hi, my name is Aron Särkioja and I'm from Rovaniemi, Finland. I am a self-taught programmer with a passion for creating innovative solutions and pushing the boundaries of what's possible with technology.
+              </p>
+              <p class="textLeft" style="color: grey;">
+                I first discovered my love for programming when I was in high school, and since then, I've been honing my skills by learning various programming languages and frameworks. I'm particularly interested in web development and enjoy building responsive and visually appealing websites.
+              </p>
+              <p class="textLeft" style="color: grey;">
+                In my free time, I like to work on personal programming projects, such as building web applications or experimenting with new programming languages. I also enjoy participating in online coding challenges and hackathons to test my skills against other developers and learn new techniques.
+              </p>
+              <p class="textLeft" style="color: grey;">
+                As a lifelong learner, I am constantly seeking out new opportunities to expand my knowledge and skills. I believe that learning is a continuous process and strive to stay up-to-date with the latest trends and advancements in the field of programming.
+              </p>
+              <p class="textLeft" style="color: grey">
+                While I don't have any specific goals at the moment, I am excited to continue pursuing my passion for programming and exploring new opportunities in this field. I am always open to collaborating with others on interesting projects and welcome any opportunities to connect with fellow programmers.
+              </p>
+              <p class="textLeft" style="color: grey; padding-bottom: 5px;">
+                Thank you for taking the time to read my "About Me" section. If you have any questions or would like to connect with me, please feel free to reach out.
+              </p>
+              
 
-        <!-- Navigaatio mobiilille-->
-        <div class="left-right-item-middle hidden" id="MobileNavigation">
-            <nav>
-                <p class="textCenter" style="font-size: 30px;">Navigation:</p>
-                <hr class="hr" style="background-color: black;">
-                <div><p class="textCenter" style="color: white" onclick="goToHTML(999)">Home</p></div>
-                <div><p class="textCenter" style="color: white" onclick="goToHTML(1)">About Me</p></div>
-                <div><p class="textCenter" style="color: white" onclick="goToHTML(2)">My Knowledge</p></div>
-                <div><p class="textCenter" style="color: white" onclick="goToHTML(3)">Professions</p></div>
-                <div><p class="textCenter" style="color: white" onclick="goToHTML(4)">My History At Coding</p></div>
-            </nav>
         </div>
+    </div>
+
+    <!-- Navigaatio mobiilille-->
+    <div class="left-right-item-middle hidden" id="MobileNavigation">
+        <nav>
+            <div class="MobNav_Title_And_ExitButton">
+                <p class="textCenter" id="MobNavTitle">Navigation:</p>
+                <div id="exitButtonDIV">
+                    <p class="textCenter" id="exitButton" onclick="navOpenClose()">X</p>
+                </div>
+            </div>
+            <hr class="hr" style="background-color: white;">
+            <div class="ButtonNaVMobile">
+                <div id="buttonDiv">
+                    <p class="textCenter" style="color: white" onclick="goToHTML(999)">Home</p>
+                </div>
+                <div id="buttonDivSelected">
+                    <p class="textCenter" style="color: white" onclick="goToHTML(1)">About Me</p>
+                </div>
+                <div id="buttonDiv">
+                    <p class="textCenter" style="color: white" onclick="goToHTML(2)">My Knowledge</p>
+                </div>
+                <div id="buttonDiv">
+                    <p class="textCenter" style="color: white" onclick="goToHTML(3)">Professions</p>
+                </div>
+                <div id="buttonDiv"><p class="textCenter" style="color: white" onclick="goToHTML(4)">Contact Me</p></div>
+                
+            </div>
+        </nav>
+    </div>
 
     </div>
 
     <!-- Down Flexbox-->
     <div class="flexbox-up-down-container">
-        <div class="flex-up-down-item" style="background-color: black;"> /* Cant see it */
-            <p class="textCenter" style="color: grey">Footer</p>
+        <div class="flex-up-down-item" style="background-color: rgb(10, 0, 13);"> /* Cant see it */
+            <p class="textCenter" style="color: grey; font-size: 15px;">
+                Copyright © Aron Särkioja 2023. All rights reserved.
+
+                This website and its contents are the property of 2023 and are protected under applicable copyright laws. The content of this website may not be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of Särkioja, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+                
+                For permission requests, please contact Aron Särkioja at aronsarkioja7@gmail.com.
+                
+                All trademarks, service marks, trade names, trade dress, product names and logos appearing on the site are the property of their respective owners.
+            </p>
         </div>
     </div>
 
