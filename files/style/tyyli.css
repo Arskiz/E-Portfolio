@@ -1,20 +1,22 @@
 /*---------------------------------- Body, ja muut tärkeät jutut ----------------------------------*/
 .E-Portfolio-Body {
-    background-color: rgb(10, 0, 13);
+    background-color: rgb(40, 40, 40);
     margin: 0;
-
+    transition: all;
+    transition-duration: 0.3s;
 }
 
 .header {
+    z-index: 999;
+    position: fixed;
+    top: 0%;
     display: flex;
     width: 100%;
-    background-color: rgb(10, 0, 13);
+    height: 15%;
+    justify-content: center;
+    background-color: rgb(40, 40, 40);
 }
 
-.header p {
-    margin: 0;
-
-}
 
 .selected {
     color: rgb(199, 199, 199);
@@ -110,12 +112,11 @@
 
 /*---------------------------------- Muut interaktiiviset jutut, Nappulat, kirjoitushommat etc.. ----------------------------------*/
 .textContent {
-    background-color: rgb(25, 0, 32);
+    background-color: rgb(30, 30, 30);
 }
 
 .headerItems {
     display: flex;
-    align-items: center;
 
 }
 
@@ -132,22 +133,39 @@
 
 .headerButton {
     display: inline-block;
-    background-color: rgb(10, 0, 13);
+    background-color: rgb(49, 49, 49);
     border: none;
+    border-radius:10px;
     color: rgb(80, 80, 80);
     transition-property: background-color;
     transition-duration: 0.1s;
-    width: 100%;
-    height: 100%;
+    margin-top: 1.5%;
+    height: 85%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
 }
 
-.headerButton:hover {
-    background-color: rgb(16, 0, 21);
+.headerButtonSelected{
+    display: inline-block;
+    background-color: rgb(75, 75, 75);
+    border: none;
+    border-radius:10px;
+    color: rgb(80, 80, 80);
+    transition-property: background-color;
+    transition-duration: 0.1s;
+    height: 90%;
+    margin-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.headerButton:hover, .headerButtonSelected:hover {
+    background-color: rgb(49, 49, 49);
     color: rgb(159, 159, 159);
 }
 
-.headerButton:active {
-    background-color: rgb(24, 0, 31);
+.headerButton:active, .headerButtonSelected:active {
+    background-color: rgb(52, 52, 52);
 }
 
 #navIconHitbox {
@@ -292,6 +310,11 @@
     display: inline-block;
 }
 
+#footerText{
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .formButton {
     padding: 5px;
     border-radius: 10px;
@@ -419,6 +442,10 @@ label {
         font-size: 30px;
     }
 
+    .headerButtonText {
+        font-size: 50px;
+      }
+
     .textCenter {
         flex-direction: column;
         align-items: center;
@@ -431,12 +458,6 @@ label {
     .headerItemsMobile {
         display: flex;
     }
-
-    .headerButton {
-        margin: 10px 0;
-    }
-
-
 
 }
 

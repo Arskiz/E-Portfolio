@@ -16,20 +16,20 @@
         <!-- Desktop Header -->
 
         <!-- Title -->
-        <img src="../images/logo.png" alt="logo" id="homeButton" width="100px" height="100px" onclick="goToHTML(999)">
+        
         <div class="headerItems" alt="headerin napit ja muut">    
             <!-- Buttons -->
             <button class="headerButton" id="headerButtonInfo" onclick="goToHTML(1)">
-                <h1 class="textCenter" style="white-space: nowrap;">About Me</h1>
+                <h1 class="headerButtonText" style="white-space: nowrap;">About Me</h1>
             </button>
             <button class="headerButton" id="headerButtonKnowledge" onclick="goToHTML(2)">
-                <h1 class="textCenter" style="white-space: nowrap;">Knowledge</h1>
+                <h1 class="headerButtonText" style="white-space: nowrap;">Knowledge</h1>
             </button>
             <button class="headerButton" id="headerButton3" onclick="goToHTML(3)">
-                <h1 class="textCenter" style="white-space: nowrap;">Professions</h1>
+                <h1 class="headerButtonText" style="white-space: nowrap;">Professions</h1>
             </button>
-            <button class="headerButton" id="headerButton3" onclick="goToHTML(4)">
-                <h1 class="textCenter selected" style="white-space: nowrap;">Contact Me</h1>
+            <button class="headerButtonSelected" id="headerButton3" onclick="goToHTML(4)">
+                <h1 class="headerButtonText selected" style="white-space: nowrap;">Contact Me</h1>
             </button>
         </div>
 
@@ -90,11 +90,11 @@
                 </div>
                 <hr class="hr" style="background-color: white;">
                 <div class="ButtonNaVMobile">
-                    <div id="buttonDiv"><p class="textCenter" style="color: white" onclick="goToHTML(999)">Home</p></div>
-                    <div id="buttonDiv"><p class="textCenter" style="color: white" onclick="goToHTML(1)">About Me</p></div>
-                    <div id="buttonDiv"><p class="textCenter" style="color: white" onclick="goToHTML(2)">My Knowledge</p></div>
-                    <div id="buttonDiv"><p class="textCenter" style="color: white" onclick="goToHTML(3)">Professions</p></div>
-                    <div id="buttonDivSelected"><p class="textCenter" style="color: white;" onclick="goToHTML(4)">Contact Me</p></div>
+                    <div id="buttonDiv"><p class="headerButtonText" style="color: white" onclick="goToHTML(999)">Home</p></div>
+                    <div id="buttonDiv"><p class="headerButtonText" style="color: white" onclick="goToHTML(1)">About Me</p></div>
+                    <div id="buttonDiv"><p class="headerButtonText" style="color: white" onclick="goToHTML(2)">My Knowledge</p></div>
+                    <div id="buttonDiv"><p class="headerButtonText" style="color: white" onclick="goToHTML(3)">Professions</p></div>
+                    <div id="buttonDivSelected"><p class="headerButtonText" style="color: white;" onclick="goToHTML(4)">Contact Me</p></div>
                 </div>
             </nav>
         </div>
@@ -103,7 +103,7 @@
 
     <!-- Down Flexbox-->
     <div class="flexbox-up-down-container">
-        <div class="flex-up-down-item" style="background-color: rgb(10, 0, 13);"> /* Cant see it */
+        <div id="footerText"  class="flex-up-down-item"> 
             <p class="textCenter" style="color: grey; font-size: 15px;">
                 Copyright © Aron Särkioja 2023. All rights reserved.
 
