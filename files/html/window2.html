@@ -12,24 +12,27 @@
 
 <body class="E-Portfolio-Body">
     <!-- Upper Flexbox -->
-    <header class="header">
-        <!-- Desktop Header -->
-
-        <!-- Title -->
-        <div class="headerItems" alt="headerin napit ja muut">    
+    <header>
+        <div class="header-left" alt="headerin napit ja muut">    
             <!-- Buttons -->
+            <button class="headerButton" id="headerButtonHome" onclick="goToHTML(999)">
+                <h1 class="headerButtonText" style="white-space: nowrap;">Home</h1>
+            </button>
             <button class="headerButton" id="headerButtonInfo" onclick="goToHTML(1)">
                 <h1 class="headerButtonText" style="white-space: nowrap;">About Me</h1>
             </button>
             <button class="headerButtonSelected" id="headerButtonKnowledge" onclick="goToHTML(2)">
                 <h1 class="headerButtonText selected" style="white-space: nowrap;">Knowledge</h1>
             </button>
-            <button class="headerButton" id="headerButton3" onclick="goToHTML(3)">
+            <button class="headerButton" id="headerButtonProfessions" onclick="goToHTML(3)">
                 <h1 class="headerButtonText" style="white-space: nowrap;">Professions</h1>
             </button>
-            <button class="headerButton" id="headerButton3" onclick="goToHTML(4)">
+            <button class="headerButton" id="headerButtonContactMe" onclick="goToHTML(4)">
                 <h1 class="headerButtonText" style="white-space: nowrap;">Contact Me</h1>
             </button>
+        </div>
+        <div class="header-right">
+            <p class="textCenter">lol</p>
         </div>
 
         <!-- Header For Mobile -->
