@@ -1,17 +1,27 @@
 /*---------------------------------- Body, ja muut tärkeät jutut ----------------------------------*/
 .E-Portfolio-Body {
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(38, 38, 38);
     margin: 0;
     transition: all;
     transition-duration: 0.3s;
+    
+}
+#transition-fade{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+.fade-in{
+    opacity: 1;
+}
+.fade-out{
+    opacity: 0;
 }
 
 header {
-    
+    margin-right: 10px;
     display: flex;
     align-items: center;
-
-    background-color: rgb(40, 40, 40);
+    background-color: transparent;
 }
 
 
@@ -21,11 +31,23 @@ header {
     justify-content: center;
     align-items: center;
 }
+.header-right{
+    margin-left: auto;
+}
+
+#headerTitle{
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
+    color: rgb(3, 171, 255);
+    white-space: nowrap;
+}
 
 .selected {
-    color: rgb(199, 199, 199);
+    color: rgb(0, 170, 255);
     padding-bottom: 1px;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid rgb(0, 170, 255);
 }
 
 .dropdown {
@@ -120,32 +142,43 @@ header {
 .textTitle {
     font-weight: bold;
     font-size: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     margin: 10px;
     white-space: nowrap;
 }
 
+.textContentTitle{
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    margin: 10px;
+    white-space: nowrap;
+    color: grey;
+}
+
 .textLeft {
     padding-left: 10px;
     padding-right: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-size: 20px;
+    color: grey;
     text-align: left;
 }
 
 .textCenter {
     margin: 10px;
     font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     text-align: center;
 }
 
 .textRight {
     margin: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-style: normal;
     text-align: right;
 }
@@ -157,10 +190,6 @@ header {
     background-color: rgb(30, 30, 30);
 }
 
-.headerItems p {
-    padding: 10px;
-}
-
 .headerItemsMobile {
     display: none;
     padding: 10px;
@@ -170,38 +199,27 @@ header {
 
 .headerButton {
     display: inline-block;
-    background-color: rgb(49, 49, 49);
+    background-color: transparent;
     border: none;
     height: 100%;
-    color: rgb(80, 80, 80);
+    color: rgb(0, 118, 176);
 
-    transition-property: background-color color border-bottom;
+    transition-property: background-color color border;
     transition-duration: 0.2s;
 }
 
 .headerButtonSelected{
     display: inline-block;
     background-color: rgb(75, 75, 75);
-    border: none;
-    color: rgb(103, 102, 102);
-
-    transition-property: background-color color;
-    transition-duration: 0.1s;
-
+    border-radius: 2px;
+    border: 2px solid rgb(0, 170, 255);
+    color: rgb(0, 170, 255);
 }
 
 .headerButton:hover {
-    background-color: rgb(49, 49, 49);
-    color: rgb(159, 159, 159);
-    border-bottom: 3px solid rgb(159, 159, 159);
-}
-.headerButtonSelected:hover{
-    background-color: rgb(49, 49, 49);
-    color: rgb(159, 159, 159);
-}
-
-.headerButton:active, .headerButtonSelected:active {
-    background-color: rgb(52, 52, 52);
+    background-color: rgb(75, 75, 75);
+    color: rgb(0, 170, 255);
+    border: 1px solid rgb(0, 170, 255);
 }
 
 #navIconHitbox {
@@ -214,36 +232,6 @@ header {
     width: 85%;
     border: none;
     background-color: rgb(136, 136, 136);
-    ;
-}
-
-
-
-#MobileNavigation {
-    z-index: 9999;
-    position: fixed;
-    background-color: rgb(54, 54, 54);
-    border-radius: 10px;
-    border: 2px solid rgb(0, 0, 0);
-    top: 0%;
-    left: 50%;
-    right: 0%;
-    bottom: 0%;
-    justify-content: center;
-}
-
-#exitButton {
-    display: inline-block;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: rgb(89, 89, 89);
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    transition-property: background-color;
-    transition-duration: 0.2s;
 }
 
 #exitButtonDIV {
@@ -253,57 +241,79 @@ header {
     right: calc(0.1%);
 }
 
+#exitButton {
+    display: inline-block;
+    border: 2px solid rgb(0, 142, 219);
+    border-radius: 5px;
+    background-color: rgba(0, 89, 136, 0.8);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: aqua;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+
 #exitButton:hover {
     display: inline-block;
-    border: 2px solid black;
-    background-color: rgb(67, 67, 67);
+    border: 2px solid rgb(0, 166, 255);
+    background-color: rgba(0, 117, 181, 0.8);
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
+#MobileNavigation {
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(0, 89, 136, 0.8);
+    border: 2px solid rgb(0, 166, 255);
+    top: 0%;
+    left: 50%;
+    right: 0%;
+    bottom: 0%;
+    justify-content: center;
+}
+
 #MobileNavigation #MobNavTitle {
-    color: white;
+    color: rgb(0, 166, 255);
+    font-weight: bold;
     font-size: 30px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 #MobileNavigation #buttonDiv {
-    border-radius: 10px;
-    border: 1px solid rgb(176, 176, 176);
-
-    margin-bottom: 5px;
-    background-color: rgb(106, 106, 106);
-    border: 1px solid black;
+    border: 1px solid rgb(0, 170, 255);
+    background-color: rgb(0, 90, 193);
     transition-property: background-color;
     transition-duration: 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 #MobileNavigation #buttonDiv:hover {
-    border-radius: 10px;
-    border: 1px solid rgb(176, 176, 176);
-    margin-bottom: 5px;
-    background-color: rgb(160, 160, 160);
+    border: 1px solid rgb(0, 118, 176);
+    background-color: rgb(0, 102, 218);
     transition-property: background-color;
     transition-duration: 0.2s;
 }
 
 #MobileNavigation #buttonDivSelected {
-    border-radius: 10px;
-    border: 1px solid rgb(176, 176, 176);
-
-    margin-bottom: 5px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid black;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-}
-
-#MobileNavigation #buttonDivSelected:hover {
-    border-radius: 10px;
-    border: 1px solid rgb(176, 176, 176);
-    margin-bottom: 5px;
-    background-color: rgb(160, 160, 160);
+    background-color: rgb(0, 119, 255);
+    border: 1px solid rgb(0, 170, 255);
     transition-property: background-color;
     transition-duration: 0.2s;
 }
@@ -348,7 +358,7 @@ header {
 
 #footerText{
     background-color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .formButton {
@@ -371,7 +381,7 @@ header {
 .formInput{
     border-radius: 5px;
     border: 4px solid rgb(36, 36, 36);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     background-color: white;
     
@@ -394,8 +404,6 @@ header {
 label {
     margin-bottom: 5px;
 }
-
-
 
 
 @media (max-width: 560px) {
@@ -437,9 +445,6 @@ label {
     #MobileNavigation {
         z-index: 9999;
         position: fixed;
-        background-color: rgb(54, 54, 54);
-        border-radius: 10px;
-        border: 2px solid rgb(0, 0, 0);
         top: 0%;
         left: 40%;
         right: 0%;
@@ -455,13 +460,13 @@ label {
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1015px) {
     #MobileNavigation {
         display: none;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1015px) {
     .flexbox-left-right-container {
         flex-direction: column;
         align-items: center;
@@ -474,20 +479,21 @@ label {
         border-top: 1px solid black;
     }
 
-    .textTitle {
-        font-size: 30px;
-    }
-
     .headerButtonText {
         font-size: 50px;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE/Edge */
+        user-select: none;
     }
 
     .textCenter {
         flex-direction: column;
         align-items: center;
+        
     }
 
-    .headerItems {
+    .header-right {
         display: none;
     }
 
@@ -496,5 +502,3 @@ label {
     }
 
 }
-
-@media (max-width: 480px) {}

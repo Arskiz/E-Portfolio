@@ -24,7 +24,14 @@ function goToHTML(id) {
     window.location.href = windowKey;
   }
   else {
-    window.location.href = ("e-portfolio.html");
+    if (window.location.pathname !== "/e-portfolio.html") {
+      window.location.href = "e-portfolio.html";
+    }
   }
-
 }
+
+//Smooth animation on window load
+document.addEventListener('DOMContentLoaded', function() {
+  var siteContent = document.getElementById('transition-fade');
+  siteContent.style.opacity = '1';
+});

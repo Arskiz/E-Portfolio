@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/tyyli.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <title>Professions, Aron Särkioja</title>
 </head>
 <script src="../javascript/javascript.js"></script>
 
-<body class="E-Portfolio-Body">
+<body class="E-Portfolio-Body" id="transition-fade">
     <!-- Upper Flexbox -->
     <header>
-        <div class="header-left" alt="headerin napit ja muut">    
+        <div onclick="goToHTML(999)"><h1 id="headerTitle" class="textCenter" style="margin-right: 0px; font-size: 40px;">E-PORTFOLIO</h1></div>
+        <div class="header-right" alt="headerin napit ja muut">    
             <!-- Buttons -->
-            <button class="headerButton" id="headerButtonHome" onclick="goToHTML(999)">
+            <button class="headerButton" id="headerButton" onclick="goToHTML(999)">
                 <h1 class="headerButtonText" style="white-space: nowrap;">Home</h1>
             </button>
-            <button class="headerButton" id="headerButtonInfo" onclick="goToHTML(1)">
+            <button class="headerButton" id="headerButton" onclick="goToHTML(1)">
                 <h1 class="headerButtonText" style="white-space: nowrap;">About Me</h1>
             </button>
-            <button class="headerButton" id="headerButtonKnowledge" onclick="goToHTML(2)">
+            <button class="headerButton" id="headerButton" onclick="goToHTML(2)">
                 <h1 class="headerButtonText" style="white-space: nowrap;">Knowledge</h1>
             </button>
-            <button class="headerButtonSelected" id="headerButtonProfessions" onclick="goToHTML(3)">
+            <button class="headerButtonSelected" id="headerButton" onclick="goToHTML(3)">
                 <h1 class="headerButtonText selected" style="white-space: nowrap;">Professions</h1>
             </button>
-            <button class="headerButton" id="headerButtonContactMe" onclick="goToHTML(4)">
+            <button class="headerButton" id="headerButton" onclick="goToHTML(4)">
                 <h1 class="headerButtonText" style="white-space: nowrap;">Contact Me</h1>
             </button>
-        </div>
-        <div class="header-right">
-            <p class="textCenter">lol</p>
         </div>
 
         <!-- Header For Mobile -->
@@ -42,33 +40,27 @@
             <div id="navIconHitbox" onclick="navOpenClose()">
                 <img src="../images/dropdown-white.png" id="navIcon" alt="navIcon" >
             </div>
-            
-
         </div>
     </header>
 
 
-        <!-- Keski Iso-Flexbox -->
+        <!-- Text Area (Center Flexbox)  -->
         <div class="flex-middle-item left-right-item-middle" style="background-color: rgb(11, 11, 11);">
             <div class="textContent">
-                <p class="textTitle" style="color: grey;">My Professions:</p>
-                <p class="textLeft" style="color: grey;">
-                    Welcome to my Professions tab! Although I haven't worked in the programming industry yet due to my age, I've been passionate about programming for several years and have acquired a wealth of experience and knowledge in this field.
-                  </p>
-                  <p class="textLeft" style="color: grey;">
-                    In my free time, I enjoy working on personal programming projects that help me to further develop my skills and knowledge. Some of my recent projects include creating a weather application using React and integrating a database into a web application using MongoDB.
-                  </p>
-                  <p class="textLeft" style="color: grey;">
-                    While I'm still exploring my options and haven't yet decided on a specific career path, I'm excited about the possibilities that the programming industry holds. I'm eager to continue learning and growing in this field, and I'm confident that my passion and dedication will help me to succeed in whatever path I choose.
-                  </p>
-                  <p class="textLeft" style="color: grey; padding-bottom: 5px;">
-                    If you have any questions or suggestions regarding my future career in programming, please feel free to reach out.
-                  </p>
-                  
+                <p class="textContentTitle">My Professions:</p>
+                <p class="textLeft">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor aliquet mi, vitae dapibus lacus pharetra vel. Nullam dignissim malesuada convallis. Vestibulum luctus pharetra enim, a rhoncus neque iaculis eget. Suspendisse non purus urna. Quisque a arcu nec lectus tempor pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam ac lectus nulla. Morbi sit amet sollicitudin sem, in efficitur quam. Mauris cursus mi turpis, at sagittis justo vestibulum a. Curabitur eu bibendum ipsum, vitae luctus est. Integer auctor, libero et ultrices ultrices, lorem lectus facilisis turpis, eget cursus quam massa vel odio. Cras pretium viverra quam, sed lacinia sem vestibulum eget.
+                    
+                    Pellentesque condimentum tortor sit amet neque ultrices pellentesque. Mauris vitae nunc ac tellus faucibus facilisis. Nunc varius viverra turpis, vel facilisis sem eleifend sit amet. Quisque elementum vulputate condimentum. Suspendisse sed ligula a nisl pretium semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec eget fermentum dolor. Nunc bibendum nunc at ligula efficitur, eget lacinia lacus faucibus. Phasellus iaculis odio vel massa malesuada finibus. Maecenas sed orci sed massa vulputate aliquam vitae ac elit.
+                    
+                    In hac habitasse platea dictumst. Ut id ex eu tellus auctor cursus vitae eget dolor. Fusce egestas felis sed diam fermentum scelerisque. Aliquam posuere nulla eu feugiat fringilla. Nam vulputate, nisi ac rhoncus tincidunt, erat enim pellentesque tortor, non faucibus velit est eget erat. Sed vel dui quis nulla rutrum faucibus. Curabitur tristique arcu quis est auctor, sit amet iaculis massa rutrum.
+                    
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam ut urna id urna fermentum condimentum. Morbi dignissim, ex vel laoreet luctus, nisi justo scelerisque dolor, non placerat justo nunc vel sem. In tristique malesuada magna, non faucibus felis feugiat in. Nam ultrices semper luctus. Sed pretium, ipsum nec bibendum elementum, neque lectus aliquam purus, eget facilisis urna dolor sit amet dui. Vestibulum imperdiet felis neque, eu commodo mi finibus vitae. Fusce eleifend massa at nunc feugiat, ut venenatis dolor aliquam. Aliquam efficitur, leo a pellentesque tincidunt, erat purus suscipit est, ac laoreet mi risus eget odio. Aliquam erat volutpat. Donec condimentum est et lorem tristique
+                </p>
             </div>
         </div>
 
-        <!-- Navigaatio mobiilille-->
+        <!-- Mobile Navigation (Layout) -->
         <div class="left-right-item-middle hidden" id="MobileNavigation">
             <nav>
                 <div class="MobNav_Title_And_ExitButton">
@@ -88,12 +80,10 @@
             </nav>
         </div>
 
-    </div>
-
-    <!-- Down Flexbox-->
+    <!-- Bottom Flexbox (Footer) -->
     <div class="flexbox-up-down-container">
         <div id="footerText"  class="flex-up-down-item">
-            <p class="textCenter" style="color: grey; font-size: 15px;">
+            <p class="textCenter" style="color: grey; font-size: 20px;">
                 Copyright © Aron Särkioja 2023. All rights reserved.
 
                 This website and its contents are the property of 2023 and are protected under applicable copyright laws. The content of this website may not be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of Särkioja, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
@@ -101,11 +91,8 @@
                 For permission requests, please contact Aron Särkioja at aronsarkioja7@gmail.com.
                 
                 All trademarks, service marks, trade names, trade dress, product names and logos appearing on the site are the property of their respective owners.
-                
             </p>
         </div>
     </div>
-
 </body>
-
 </html>
