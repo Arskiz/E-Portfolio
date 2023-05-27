@@ -116,15 +116,32 @@
     </div>
 
     <!-- Bottom Flexbox (Footer) -->
-    <div class="flexbox-up-down-container">
-        <div id="footerText" class="flex-up-down-item">
-            <p class="connected1" style="text-align: center; font-weight: bold;">© ‎</p><p class="connected2" style="color:grey">Aron Särkioja</p>
+    <div id="footerText" class="flex-up-down-item">
+        <div style="display: flex; align-items: center; justify-content: center;">
+
+            <div id="discordHitbox" onclick="pressedSocials(3)" style="margin-right: 20px;">
+                <img src="../images/discord.svg" alt="discord logo" width="40px">
+            </div>
+
+            <div id="emailHitbox" onclick="pressedSocials(2)">
+                <img src="../images/email.png" alt="email-icon" width="40px">
+            </div>
+            
+            <p class="connected1" style="text-align: center; font-weight: bold; margin-left: 20px; color: rgb(0, 229, 255); font-size: 40px">© ‎</p><p class="connected2 textCenter" style="color:rgb(0, 170, 255); font-size: 40px; ">Aron Särkioja</p>   
+            
+            <div id="githubHitbox" onclick="pressedSocials(1)" style="margin-left: 20px;">
+                <img src="../images/github-icon.png" alt="github-icon" width="40px">
+            </div>
+
+            <div id="phoneHitbox" onclick="pressedSocials(4)" style="margin-left: 20px;">
+                <img src="../images/phone-call-icon.svg" alt="github-icon" width="40px">
+            </div>
             
         </div>
     </div>
-    <div id="FooterCloseButton" class="finish" onclick="footerCloseOpen()">
-        <img src="../images/collapse_arrow.png" alt="close_footer" width="30px">
-    </div>
+<div id="FooterCloseButton" class="finish" onclick="footerCloseOpen()">
+    <p class="textCenter cantPaintOverText" id="closeOpen" style="border-radius: 10px; border: 1px solid grey; background-color: rgba(124, 124, 124, 0.2); padding: 5px; padding-bottom: 7px; margin-right: -10px;">Close / Open</p>
+</div>
 </body>
 
 </html>

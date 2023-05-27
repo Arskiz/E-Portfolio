@@ -7,24 +7,6 @@ const mobileNavigation = document.getElementById("MobileNavigation");
 let isOpened = false;
 let footerOpened = null;
 
-// Footer
-
-if(localStorage.getItem("footerStatus") != null){
-  footerOpened = localStorage.getItem("footerStatus");
-  console.log("footerOpened = " + footerOpened);
-  console.log("EI OLE NULL!!")
-  console.log("footerOpened in localstorage = " + localStorage.getItem("footerStatus"));
-}
-else
-{
-  footerOpened = true;
-  console.log("footerOpened = " + footerOpened);
-  console.log("SE ON NULL!!")
-  console.log("footerOpened in localstorage = " + localStorage.getItem("footerStatus"));
-}
-
-
-
 
 var collapses = {
 // Collapses (HOME PAGE)
@@ -88,6 +70,17 @@ function goToHTML(id) {
 document.addEventListener('DOMContentLoaded', function () {
   var siteContent = document.getElementById('transition-fade');
   siteContent.style.opacity = '1';
+
+  const openBtn = document.getElementById("FooterCloseButton");
+  const footerElement = document.getElementById("footerText");
+
+  if (footerOpened) {
+    footerElement.style.transform = "translateY(150px)";
+    openBtn.style.transform = "translateY(0px)";
+  } else {
+    footerElement.style.transform = "translateY(0px)";
+    openBtn.style.transform = "translateY(-120px)";
+  }
 });
 
 // Collapse's own handling function
@@ -123,22 +116,19 @@ function footerCloseOpen(){
   const openBtn = document.getElementById("FooterCloseButton");
   const footerElement = document.getElementById("footerText");
 
-  if(footerOpened) {
-    footerElement.style.transform = "translateY(50px)";
-    openBtn.classList.remove("finish");
-    openBtn.classList.add("start");
-  }
-  else if(!footerOpened)
-  {
-    footerElement.style.transform = "translateY(0px)";
+  if (footerOpened) {
     openBtn.classList.remove("start");
     openBtn.classList.add("finish");
+    footerElement.style.transform = "translateY(150px)";
+    openBtn.style.transform = "translateY(0px)";
+  } else {
+    openBtn.classList.add("start");
+    openBtn.classList.remove("finish");
+    footerElement.style.transform = "translateY(0px)";
+    openBtn.style.transform = "translateY(-120px)";
   }
-  footerOpened = !footerOpened;
-  localStorage.setItem("footerStatus", footerOpened);
 
-  console.log("footerOpened = " + footerOpened);
-  console.log("footerOpened in localstorage = " + localStorage.getItem("footerStatus"));
+  footerOpened = !footerOpened;
 }
 
 function pressedSocials(id){
