@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +13,16 @@
 <script src="../javascript/javascript.js"></script>
 
 <body class="E-Portfolio-Body" id="transition-fade">
+
     <!-- Upper Flexbox -->
     <header>
-        <div onclick="goToHTML(999)"><h1 id="headerTitle" class="textCenter" style="margin-right: 0px; font-size: 40px;">E-PORTFOLIO</h1></div>
-        <div class="header-right" alt="headerin napit ja muut">    
+        <!-- Title -->
+        <div id="headerTitleDiv" onclick="goToHTML(999)">
+            <h1 id="headerTitle" class="textCenter">Aron Särkioja<h1 class="routeMainTitle textCenter" id="headerMainTitle">➪ Contact Me</h1></h1>
+        </div>
+        
+        <!-- Header For Desktop/Laptop/PC -->
+        <div class="header-right" alt="headerin napit ja muut">
             <!-- Buttons -->
             <button class="headerButton" id="headerButton" onclick="goToHTML(999)">
                 <h1 class="headerButtonText" style="white-space: nowrap;">Home</h1>
@@ -34,74 +41,90 @@
             </button>
         </div>
 
+
         <!-- Header For Mobile -->
-        <div class="headerItemsMobile" style="width: 100%;">
-            <p class="textContentTitle" style="size: 10px"></p>
+        <div class="headerItemsMobile header-right">
             <!-- Hamburger-Menu-Button -->
             <div id="navIconHitbox" onclick="navOpenClose()">
-                <img src="../images/dropdown-white.png" id="navIcon" alt="navIcon" >
+                <img src="../images/dropdown-white.png" id="navIcon" alt="navIcon">
             </div>
         </div>
+        
     </header>
 
 
-        <!-- Text Area (Center Flexbox)  -->
-        <div class="flex-middle-item left-right-item-middle" style="background-color: rgb(11, 11, 11);">
-            <div class="textContent">
-                <p class="textCenter" style="color: grey; font-size: 40px; font-weight: bold;">Contact Me via form:</p>
-                <div class="contactMe">
-                    <form class="contactMeForm textLeft" style="color: grey;" method="POST" action="">
-                      <div class="form-row">
+    <!-- Text Area (Center Flexbox)  -->
+    <div class="flex-middle-item left-right-item-middle" style="background-color: transparent;">
+        <div class="textContent">
+            <p class="textCenter" style="color: grey; font-size: 40px; font-weight: bold;  font-family: Arial, Helvetica, sans-serif;">Contact Me via form:</p>
+            <div class="contactMe">
+                <form class="contactMeForm textLeft" style="color: grey; font-family: Arial, Helvetica, sans-serif;" method="POST" action="">
+                    <div class="form-row">
                         <label for="firstName">First Name:</label>
                         <input class="formInput" type="text" id="firstName" name="firstName" required>
-                      </div>
-                      <div class="form-row">
+                    </div>
+                    <div class="form-row">
                         <label for="lastName">Last Name:</label>
                         <input class="formInput" type="text" id="lastName" name="lastName" required>
-                      </div>
-                      <div class="form-row">
+                    </div>
+                    <div class="form-row">
                         <label for="email">Email:</label>
                         <input class="formInput" type="email" id="email" name="email" required>
-                      </div>
-                      <div class="form-row">
+                    </div>
+                    <div class="form-row">
                         <label for="message">Message:</label>
                         <textarea class="formInput" id="message" name="message" rows="4" required></textarea>
-                      </div>
-                      <div class="form-row">
+                    </div>
+                    <div class="form-row">
                         <input type="submit" class="formButton" value="Submit">
-                      </div>
-                    </form>
-                  </div>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
 
-        <!-- Mobile Navigation (Layout) -->
+    <!-- Mobile Navigation Layout-->
+    <div id="transition-fade-menu">
         <div class="left-right-item-middle hidden" id="MobileNavigation">
             <nav>
-                <div class="MobNav_Title_And_ExitButton">
+                <div class="MobNav_Title_And_ExitButton" >
                     <p class="textCenter" id="MobNavTitle">Navigation:</p>
                     <div id="exitButtonDIV">
-                        <p class="textCenter" id="exitButton" onclick="navOpenClose()">X</p>
+                        <p class="textCenter" id="exitButton" onclick="navOpenClose()">Close</p>
                     </div>
                 </div>
                 <hr class="hr" style="background-color: white;">
                 <div class="ButtonNaVMobile">
-                    <div id="buttonDiv"><p class="textCenter" style="color: white" onclick="goToHTML(999)">Home</p></div>
-                    <div id="buttonDiv"><p class="textCenter" style="color: white" onclick="goToHTML(1)">About Me</p></div>
-                    <div id="buttonDiv"><p class="textCenter" style="color: white" onclick="goToHTML(2)">My Knowledge</p></div>
-                    <div id="buttonDiv"><p class="textCenter" style="color: white" onclick="goToHTML(3)">Professions</p></div>
-                    <div id="buttonDivSelected"><p class="textCenter" style="color: rgb(0, 170, 255);" onclick="goToHTML(4)">Contact Me</p></div>
+                    <div id="buttonDiv">
+                        <p class="textCenter " style="color: white" onclick="goToHTML(999)">Home</p>
+                    </div>
+                    <div id="buttonDiv">
+                        <p class="textCenter" style="color: white" onclick="goToHTML(1)">About Me</p>
+                    </div>
+                    <div id="buttonDiv">
+                        <p class="textCenter" style="color: white" onclick="goToHTML(2)">My Knowledge</p>
+                    </div>
+                    <div id="buttonDiv">
+                        <p class="textCenter" style="color: white" onclick="goToHTML(3)">Professions</p>
+                    </div>
+                    <div id="buttonDivSelected">
+                        <p class="textCenter" style="color: rgb(0, 170, 255);" onclick="goToHTML(4)">Contact Me</p>
+                    </div>
                 </div>
             </nav>
         </div>
+    </div>
 
-    <!-- Bottom Flexbox (Layout) -->
+    <!-- Bottom Flexbox (Footer) -->
     <div class="flexbox-up-down-container">
-        <div id="footerText"  class="flex-up-down-item"> 
-            <p class="textCenter" style="color: grey; font-size: 20px;">
-                Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri Footeri
-            </p>
+        <div id="footerText" class="flex-up-down-item">
+            <p class="connected1" style="text-align: center; font-weight: bold;">© ‎</p><p class="connected2" style="color:grey">Aron Särkioja</p>
+            
         </div>
     </div>
+    <div id="FooterCloseButton" class="finish" onclick="footerCloseOpen()">
+        <img src="../images/collapse_arrow.png" alt="close_footer" width="30px">
+    </div>
 </body>
+
 </html>
