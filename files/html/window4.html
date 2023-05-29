@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/tyyli.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-
-    <title>Contact Me, Aron Särkioja</title>
+    <link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
+    <title>Professions, Aron Särkioja</title>
 </head>
 <script src="../javascript/javascript.js"></script>
 
@@ -18,27 +17,51 @@
     <header>
         <!-- Title -->
         <div id="headerTitleDiv" onclick="goToHTML(999)">
-            <h1 id="headerTitle" class="textCenter">Aron Särkioja<h1 class="routeMainTitle textCenter" id="headerMainTitle">➪ Contact Me</h1></h1>
+            <h1 id="headerTitle" class="textCenter">Aron Särkioja<h1 class="routeMainTitle textCenter"
+                    id="headerMainTitle">➪ Professions</h1>
+            </h1>
         </div>
-        
+
         <!-- Header For Desktop/Laptop/PC -->
         <div class="header-right" alt="headerin napit ja muut">
+
+            <!-- Icons -->
+            <div id="iconHeader">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(999)" style="margin-right: 10px;">
+                    <img src="../images/header-icon/home-icon.png" alt="home-icon" width="50px">
+                </button>
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(1)" style="margin-right: 10px;">
+                    <img src="../images/header-icon/about_me-icon.png" alt="about_me-icon" width="50px">
+                </button>
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(2)" style="margin-right: 10px;">
+                    <img src="../images/header-icon/knowledge-icon.png" alt="knowledge-icon" width="50px">
+                </button>
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(3)" style="margin-right: 10px;">
+                    <img src="../images/header-icon/profession-icon.png" alt="profession-icon" width="50px">
+                </button>
+                <button class="headerButtonSelected" id="headerButtonIcon" onclick="goToHTML(4)">
+                    <img src="../images/header-icon/contact_me-icon.png" alt="contact_me-icon" width="50px">
+                </button>
+            </div>
+            
             <!-- Buttons -->
-            <button class="headerButton" id="headerButton" onclick="goToHTML(999)">
-                <h1 class="headerButtonText" style="white-space: nowrap;">Home</h1>
-            </button>
-            <button class="headerButton" id="headerButton" onclick="goToHTML(1)">
-                <h1 class="headerButtonText" style="white-space: nowrap;">About Me</h1>
-            </button>
-            <button class="headerButton" id="headerButton" onclick="goToHTML(2)">
-                <h1 class="headerButtonText" style="white-space: nowrap;">Knowledge</h1>
-            </button>
-            <button class="headerButton" id="headerButton" onclick="goToHTML(3)">
-                <h1 class="headerButtonText" style="white-space: nowrap;">Professions</h1>
-            </button>
-            <button class="headerButtonSelected" id="headerButton" onclick="goToHTML(4)">
-                <h1 class="headerButtonText selected" style="white-space: nowrap;">Contact Me</h1>
-            </button>
+            <div id="buttonHeader">
+                <button class="headerButton" id="headerButton" onclick="goToHTML(999)" style="margin-right: 10px;">
+                    <h1 class="headerButtonText" style="white-space: nowrap;">Home</h1>
+                </button>
+                <button class="headerButton" id="headerButton" onclick="goToHTML(1)" style="margin-right: 10px;">
+                    <h1 class="headerButtonText" style="white-space: nowrap;">About Me</h1>
+                </button>
+                <button class="headerButton" id="headerButton" onclick="goToHTML(2)" style="margin-right: 10px;">
+                    <h1 class="headerButtonText" style="white-space: nowrap;">Knowledge</h1>
+                </button>
+                <button class="headerButton" id="headerButton" onclick="goToHTML(3)" style="margin-right: 10px;">
+                    <h1 class="headerButtonText" style="white-space: nowrap;">Professions</h1>
+                </button>
+                <button class="headerButtonSelected" id="headerButton" onclick="goToHTML(4)">
+                    <h1 class="headerButtonText selected" style="white-space: nowrap;">Contact Me</h1>
+                </button>
+            </div>
         </div>
 
 
@@ -49,8 +72,8 @@
                 <img src="../images/dropdown-white.png" id="navIcon" alt="navIcon">
             </div>
         </div>
-        
     </header>
+
 
 
     <!-- Text Area (Center Flexbox)  -->
@@ -87,16 +110,16 @@
     <div id="transition-fade-menu">
         <div class="left-right-item-middle hidden" id="MobileNavigation">
             <nav>
-                <div class="MobNav_Title_And_ExitButton" >
+                <div class="MobNav_Title_And_ExitButton">
                     <p class="textCenter" id="MobNavTitle">Navigation:</p>
                     <div id="exitButtonDIV">
                         <p class="textCenter" id="exitButton" onclick="navOpenClose()">Close</p>
                     </div>
                 </div>
-                <hr class="hr" style="background-color: white;">
+                <hr class="hrTextCenter" style="background-color: white;">
                 <div class="ButtonNaVMobile">
                     <div id="buttonDiv">
-                        <p class="textCenter " style="color: white" onclick="goToHTML(999)">Home</p>
+                        <p class="textCenter " style="color: white;" onclick="goToHTML(999)">Home</p>
                     </div>
                     <div id="buttonDiv">
                         <p class="textCenter" style="color: white" onclick="goToHTML(1)">About Me</p>
@@ -115,33 +138,34 @@
         </div>
     </div>
 
-    <!-- Bottom Flexbox (Footer) -->
-    <div id="footerText" class="flex-up-down-item">
-        <div style="display: flex; align-items: center; justify-content: center;">
 
-            <div id="discordHitbox" onclick="pressedSocials(3)" style="margin-right: 20px;">
-                <img src="../images/discord.svg" alt="discord logo" width="40px">
+    <!-- Bottom Flexbox (Footer) -->
+    <div id="footerText">
+        <div style="display: flex; align-items: center; justify-content: center; margin-top: 5px; margin-bottom: 5px;">
+
+            <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)" style="margin-right: 20px;margin-left: 20px;">
+                <img src="../images/discord.svg" alt="discord-icon" width="40px">
             </div>
 
-            <div id="emailHitbox" onclick="pressedSocials(2)">
+            <div id="emailHitbox" class="clickable" onclick="pressedSocials(2)" style="margin-right: 20px;">
                 <img src="../images/email.png" alt="email-icon" width="40px">
             </div>
-            
-            <p class="connected1" style="text-align: center; font-weight: bold; margin-left: 20px; color: rgb(0, 229, 255); font-size: 40px">© ‎</p><p class="connected2 textCenter" style="color:rgb(0, 170, 255); font-size: 40px; ">Aron Särkioja</p>   
-            
-            <div id="githubHitbox" onclick="pressedSocials(1)" style="margin-left: 20px;">
+
+            <p class="connected2 textCenter" style="font-size: 30px; margin: 0px; white-space: normal;">Aron Särkioja 2023 ©</p>
+
+            <div id="githubHitbox" class="clickable" onclick="pressedSocials(1)" style="margin-left: 20px;">
                 <img src="../images/github-icon.png" alt="github-icon" width="40px">
             </div>
 
-            <div id="phoneHitbox" onclick="pressedSocials(4)" style="margin-left: 20px;">
-                <img src="../images/phone-call-icon.svg" alt="github-icon" width="40px">
+            <div id="phoneHitbox" class="clickable" onclick="pressedSocials(4)" style="margin-left: 20px;">
+                <img src="../images/phone-call-icon.svg" alt="phone-call-icon" width="40px">
             </div>
-            
+
         </div>
     </div>
-<div id="FooterCloseButton" class="finish" onclick="footerCloseOpen()">
-    <p class="textCenter cantPaintOverText" id="closeOpen" style="border-radius: 10px; border: 1px solid grey; background-color: rgba(124, 124, 124, 0.2); padding: 5px; padding-bottom: 7px; margin-right: -10px;">Close / Open</p>
-</div>
-</body>
+    <div id="FooterCloseButton" class="finish" onclick="footerCloseOpen()">
+        <img src="../images/collapse_arrow.png" alt="open/close-icon" width="40px">
+    </div>
 
+</body>
 </html>

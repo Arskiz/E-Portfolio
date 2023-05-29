@@ -287,6 +287,20 @@ header {
     transition-duration: 0.2s;
 }
 
+.headerButtonIcon{
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    color: rgb(0, 118, 176);
+    border-radius: 20px;
+    background-color: rgb(59, 59, 59);
+    padding: 5px;
+
+    transition-property: background-color color border;
+    transition-duration: 0.2s;
+}
+
 .headerButtonSelected {
     display: inline-block;
     background-color: rgb(75, 75, 75);
@@ -296,10 +310,9 @@ header {
     border-radius: 20px;
 }
 
-.headerButton:hover {
-    background-color: rgb(75, 75, 75);
+.headerButton:hover, .headerButtonIcon:hover {
+    background-color: rgb(48, 48, 48);
     color: rgb(0, 170, 255);
-    border: 1px solid rgb(0, 170, 255);
 
     cursor:pointer;
 }
@@ -594,7 +607,10 @@ label {
 
 
 @media (min-width: 1350px) {
-    #MobileNavigation {
+    #buttonHeader{
+        display: flex;
+    }
+    #iconHeader{
         display: none;
     }
 }
@@ -633,11 +649,11 @@ label {
 
     }
 
-    .header-right {
+    #buttonHeader {
         display: none;
     }
 
-    .headerItemsMobile {
+    #iconHeader{
         display: flex;
     }
 
@@ -655,10 +671,26 @@ label {
   
 }
 
+@media (max-width: 950px){
+    #iconHeader{
+        display: none;
+    }
+
+    #buttonHeader{
+        display: none;
+    }
+
+    .headerItemsMobile{
+        display: flex;
+    }
+}
+
 @media (max-width: 800px){
+
     .titleCenterText{
         font-size: 30px;
     }
+
     #codeSkillTitle{
         font-size: 20px;
     }
