@@ -5,25 +5,26 @@ const mobileNavigation = document.getElementById("MobileNavigation");
 
 // Mobile Navigation
 let isOpened = false;
-let footerOpened = null;
+let footerOpened = true;
 
 
 var collapses = {
-// Collapses (HOME PAGE)
-collapse1_1: false,
-collapse1_2: false,
-collapse1_3: false,
-collapse1_4: false,
-collapse1_5: false,
+// Collapses (HOME PAGE) (Syntax example: "11" = 1_1 = html1 - collapse 1)
+collapse11: true,
+collapse12: true,
+collapse13: true,
+collapse14: true,
+collapse15: true,
 
 // Collapses (PROFESSIONS PAGE)
-collapse4_1: false,
+collapse41: true,
 };
 
 
 let openedCollapseMark = "v";
 let closedCollapseMark1 = "< ";
 let closedCollapseMark2 = " >";
+const useCollapseMarks = false;
 
 
 
@@ -70,17 +71,6 @@ function goToHTML(id) {
 document.addEventListener('DOMContentLoaded', function () {
   var siteContent = document.getElementById('transition-fade');
   siteContent.style.opacity = '1';
-
-  const openBtn = document.getElementById("FooterCloseButton");
-  const footerElement = document.getElementById("footerText");
-
-  if (footerOpened) {
-    footerElement.style.transform = "translateY(150px)";
-    openBtn.style.transform = "translateY(0px)";
-  } else {
-    footerElement.style.transform = "translateY(0px)";
-    openBtn.style.transform = "translateY(-120px)";
-  }
 });
 
 // Collapse's own handling function
@@ -98,13 +88,18 @@ function collapseItem(id, name) {
     if (collapses["collapse" + id] !== true) {
       currentCollapse.classList.remove("hidden");
       currentCollapse.classList.add("flex-display");
-      currentCollapseText.innerHTML = openedCollapseMark + " " + name + " " + openedCollapseMark;
+      if(useCollapseMarks){
+        currentCollapseText.innerHTML = openedCollapseMark + " " + name + " " + openedCollapseMark;
+      }
+      
     } else {
       currentCollapse.classList.remove("flex-display");
       currentCollapse.classList.add("hidden");
+      if(useCollapseMarks){
       currentCollapseText.innerHTML = closedCollapseMark1 + name + closedCollapseMark2;
+      }
     }
-
+    console.log(collapses);
     collapses["collapse" + id] = !collapses["collapse" + id];
   } else {
     console.log("Element with id", div, "or", togglerText, "not found. look for them in html lol");
@@ -117,15 +112,14 @@ function footerCloseOpen(){
   const footerElement = document.getElementById("footerText");
 
   if (footerOpened) {
-    openBtn.classList.remove("start");
-    openBtn.classList.add("finish");
-    footerElement.style.transform = "translateY(150px)";
-    openBtn.style.transform = "translateY(0px)";
-  } else {
     openBtn.classList.add("start");
     openBtn.classList.remove("finish");
+    
+    footerElement.style.transform = "translateY(50px)";
+  } else {
+    openBtn.classList.remove("start");
+    openBtn.classList.add("finish");
     footerElement.style.transform = "translateY(0px)";
-    openBtn.style.transform = "translateY(-120px)";
   }
 
   footerOpened = !footerOpened;
