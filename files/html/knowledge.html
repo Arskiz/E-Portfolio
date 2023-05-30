@@ -326,9 +326,9 @@
                     </div>
 
                     <div>
-                        <p class="textCenter responsiveTitle">Projects I have programmed in the past:</p>
-                        <div id="project1">
-                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli">Avaruuspeli</a><br>
+                        <p id="game1Link" class="textCenter responsiveTitle">Projects I have programmed in the past:</p>
+                        <div id="project1" style="background-color: grey; border-radius: 20px; padding: 20px;">
+                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli"></a><br>
                             <img class="gameIMG" onclick="gamePressed(1)" src="../images/games/Avaruuspeli.png"
                                 alt="Avaruuspeli-kuva" width="800px">
 
@@ -341,18 +341,6 @@
                         <br>
                         <div id="project3">
 
-                        </div>
-
-
-                        <div class="gameWindow">
-                            <p class="textCenter" id="gameName"></p>
-                            <p class="textCenter" id="gameDescription"></p>
-
-                            <div onclick="gamePressed(999)" id="gameClose">
-                                <p class="textCenter cantPaintOverText"
-                                    style="background-color: rgba(99, 99, 99, 0.4); position: fixed; top: 1%; left: 1%; padding: 5px; border-radius: 10px;">
-                                    Close</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -396,7 +384,6 @@
     <!-- Bottom Flexbox (Footer) -->
     <div id="footerText">
         <div style="display: flex; align-items: center; justify-content: center; margin-top: 5px; margin-bottom: 5px;">
-
             <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)"
                 style="margin-right: 20px;margin-left: 20px;">
                 <img src="../images/socials/discord.svg" alt="discord-icon" width="40px">

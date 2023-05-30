@@ -278,17 +278,27 @@ function gamePressed(id) {
 
   // If the id is in the games-list
   if (id in games) {
-    const foundResults = document.getElementsByClassName("gameWindow");
-    for (let i = 0; i < foundResults.length; i++) {
-      foundResults[i].style.display = "flex";
-    }
+    if(id === 1)
+      redirect("../images/games/Avaruuspeli.png");
+    else if (id == 2)
+      redirect("../images/games/Avaruuspeli.png");
   }
-  // If it isn't, close the window
+}
+
+function redirect(site){
+  window.location.href = site;
+}
+
+var game1LinkText = document.getElementById("game1Link");
+game1LinkText.onmouseover = handleGame1ElementHover("yes");
+game1LinkText.innerHTML = "Avaruuspeli";
+
+function handleGame1ElementHover(status){
+  if(status === "yes"){
+    game1LinkText.innerHTML = "[ Click to redirect ]";
+  }
   else
   {
-      const foundResults = document.getElementsByClassName("gameWindow");
-      for (let i = 0; i < foundResults.length; i++) {
-        foundResults[i].style.display = "none";
-      }
+    game1LinkText.innerHTML = "Avaruuspeli";
   }
 }
