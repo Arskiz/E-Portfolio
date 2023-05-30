@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/tyyli.css">
     <link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
-    <title>Professions, Aron Särkioja</title>
+    <title>Contact Me, Aron Särkioja</title>
 </head>
 <script src="../javascript/javascript.js"></script>
 
@@ -17,8 +17,8 @@
     <header>
         <!-- Title -->
         <div id="headerTitleDiv" onclick="goToHTML(999)">
-            <h1 id="headerTitle" class="textCenter">Aron Särkioja<h1 class="routeMainTitle textCenter"
-                    id="headerMainTitle">➪ Professions</h1>
+            <h1 id="headerTitle" class="textCenter">
+                <h1 class="routeMainTitle textCenter" id="headerMainTitle">➪ Contact Me</h1>
             </h1>
         </div>
 
@@ -27,23 +27,27 @@
 
             <!-- Icons -->
             <div id="iconHeader">
-                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(999)" style="margin-right: 10px;">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(999)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/home-icon.png" alt="home-icon" width="50px">
                 </button>
-                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(1)" style="margin-right: 10px;">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(1)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/about_me-icon.png" alt="about_me-icon" width="50px">
                 </button>
-                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(2)" style="margin-right: 10px;">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(2)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/knowledge-icon.png" alt="knowledge-icon" width="50px">
                 </button>
-                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(3)" style="margin-right: 10px;">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(3)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/profession-icon.png" alt="profession-icon" width="50px">
                 </button>
                 <button class="headerButtonSelected" id="headerButtonIcon" onclick="goToHTML(4)">
                     <img src="../images/header-icon/contact_me-icon.png" alt="contact_me-icon" width="50px">
                 </button>
             </div>
-            
+
             <!-- Buttons -->
             <div id="buttonHeader">
                 <button class="headerButton" id="headerButton" onclick="goToHTML(999)" style="margin-right: 10px;">
@@ -69,7 +73,7 @@
         <div class="headerItemsMobile header-right">
             <!-- Hamburger-Menu-Button -->
             <div id="navIconHitbox" onclick="navOpenClose()">
-                <img src="../images/dropdown-white.png" id="navIcon" alt="navIcon">
+                <img src="../images/others/dropdown-white.png" id="navIcon" alt="navIcon">
             </div>
         </div>
     </header>
@@ -79,9 +83,12 @@
     <!-- Text Area (Center Flexbox)  -->
     <div class="flex-middle-item left-right-item-middle" style="background-color: transparent;">
         <div class="textContent">
-            <p class="textCenter" style="color: grey; font-size: 40px; font-weight: bold;  font-family: Arial, Helvetica, sans-serif;">Contact Me via form:</p>
+            <p class="textCenter"
+                style="color: grey; font-size: 40px; font-weight: bold;  font-family: Arial, Helvetica, sans-serif;">
+                Contact Me via form:</p>
             <div class="contactMe">
-                <form class="contactMeForm textLeft" style="color: grey; font-family: Arial, Helvetica, sans-serif;" method="POST" action="">
+                <form class="contactMeForm textLeft"
+                    style="color: rgb(92, 92, 92); font-family: Arial, Helvetica, sans-serif;" method="POST" action="">
                     <div class="form-row">
                         <label for="firstName">First Name:</label>
                         <input class="formInput" type="text" id="firstName" name="firstName" required>
@@ -97,6 +104,9 @@
                     <div class="form-row">
                         <label for="message">Message:</label>
                         <textarea class="formInput" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <input type="button" class="formButton" onclick="saveInputs()" value="Save Values">
                     </div>
                     <div class="form-row">
                         <input type="submit" class="formButton" value="Submit">
@@ -143,29 +153,32 @@
     <div id="footerText">
         <div style="display: flex; align-items: center; justify-content: center; margin-top: 5px; margin-bottom: 5px;">
 
-            <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)" style="margin-right: 20px;margin-left: 20px;">
-                <img src="../images/discord.svg" alt="discord-icon" width="40px">
+            <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)"
+                style="margin-right: 20px;margin-left: 20px;">
+                <img src="../images/socials/discord.svg" alt="discord-icon" width="40px">
             </div>
 
-            <div id="emailHitbox" class="clickable" onclick="pressedSocials(2)" style="margin-right: 20px;">
-                <img src="../images/email.png" alt="email-icon" width="40px">
+            <div id="emailHitbox" class="clickable" onclick="pressedSocials(2)">
+                <img src="../images/socials/email.png" alt="email-icon" width="40px">
             </div>
 
-            <p class="connected2 textCenter" style="font-size: 30px; margin: 0px; white-space: normal;">Aron Särkioja 2023 ©</p>
+            <p id="footerName" class="connected2 textCenter" style="font-size: 30px; margin: 0px; white-space: normal;">
+            </p>
 
             <div id="githubHitbox" class="clickable" onclick="pressedSocials(1)" style="margin-left: 20px;">
-                <img src="../images/github-icon.png" alt="github-icon" width="40px">
+                <img src="../images/socials/github-icon.png" alt="github-icon" width="40px">
             </div>
 
             <div id="phoneHitbox" class="clickable" onclick="pressedSocials(4)" style="margin-left: 20px;">
-                <img src="../images/phone-call-icon.svg" alt="phone-call-icon" width="40px">
+                <img src="../images/socials/phone-call-icon.svg" alt="phone-call-icon" width="40px">
             </div>
 
         </div>
     </div>
     <div id="FooterCloseButton" class="finish" onclick="footerCloseOpen()">
-        <img src="../images/collapse_arrow.png" alt="open/close-icon" width="40px">
+        <img src="../images/others/collapse_arrow.png" alt="open/close-icon" width="40px">
     </div>
 
 </body>
+
 </html>

@@ -17,8 +17,8 @@
     <header>
         <!-- Title -->
         <div id="headerTitleDiv" onclick="goToHTML(999)">
-            <h1 id="headerTitle" class="textCenter">Aron Särkioja<h1 class="routeMainTitle textCenter"
-                    id="headerMainTitle">➪ Knowledge</h1>
+            <h1 id="headerTitle" class="textCenter">
+                <h1 class="routeMainTitle textCenter" id="headerMainTitle">➪ Knowledge</h1>
             </h1>
         </div>
 
@@ -27,23 +27,27 @@
 
             <!-- Icons -->
             <div id="iconHeader">
-                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(999)" style="margin-right: 10px;">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(999)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/home-icon.png" alt="home-icon" width="50px">
                 </button>
-                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(1)" style="margin-right: 10px;">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(1)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/about_me-icon.png" alt="about_me-icon" width="50px">
                 </button>
-                <button class="headerButtonSelected" id="headerButtonIcon" onclick="goToHTML(2)" style="margin-right: 10px;">
+                <button class="headerButtonSelected" id="headerButtonIcon" onclick="goToHTML(2)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/knowledge-icon.png" alt="knowledge-icon" width="50px">
                 </button>
-                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(3)" style="margin-right: 10px;">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(3)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/profession-icon.png" alt="profession-icon" width="50px">
                 </button>
                 <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(4)">
                     <img src="../images/header-icon/contact_me-icon.png" alt="contact_me-icon" width="50px">
                 </button>
             </div>
-            
+
             <!-- Buttons -->
             <div id="buttonHeader">
                 <button class="headerButton" id="headerButton" onclick="goToHTML(999)" style="margin-right: 10px;">
@@ -52,7 +56,8 @@
                 <button class="headerButton" id="headerButton" onclick="goToHTML(1)" style="margin-right: 10px;">
                     <h1 class="headerButtonText" style="white-space: nowrap;">About Me</h1>
                 </button>
-                <button class="headerButtonSelected" id="headerButton" onclick="goToHTML(2)" style="margin-right: 10px;">
+                <button class="headerButtonSelected" id="headerButton" onclick="goToHTML(2)"
+                    style="margin-right: 10px;">
                     <h1 class="headerButtonText selected" style="white-space: nowrap;">Knowledge</h1>
                 </button>
                 <button class="headerButton" id="headerButton" onclick="goToHTML(3)" style="margin-right: 10px;">
@@ -69,7 +74,7 @@
         <div class="headerItemsMobile header-right">
             <!-- Hamburger-Menu-Button -->
             <div id="navIconHitbox" onclick="navOpenClose()">
-                <img src="../images/dropdown-white.png" id="navIcon" alt="navIcon">
+                <img src="../images/others/dropdown-white.png" id="navIcon" alt="navIcon">
             </div>
         </div>
 
@@ -80,96 +85,276 @@
     <div class="flex-middle-item left-right-item-middle" style="background-color: transparent">
         <div class="textContent">
             <div class="textCenter">
+                <p onclick="collapseItem(3_1, `Knowledge`)" class="titleCenterText cantPaintOverText"
+                    id="collapse31MainToggler" style="margin: 0px; margin-bottom: 10px;">Knowledge</p>
+                <div class="collapsible flex-display" id="collapse31">
 
-                <p onclick="collapseItem(1_1, `Introduction`)"
-                    class="textCenterPadding titleCenterText cantPaintOverText" id="collapse11MainToggler"
-                    style="margin: 0px; margin-bottom: 10px;">Introduction</p>
-                <div class="collapsible flex-display" id="collapse11">
+                    <!-- Basic Knowledge -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        My Knowledge:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            As a first-year student in vocational school, I have embarked on an exciting journey of
+                            learning and skill development.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter" style="margin-top: -5px;">
+                            However, my passion for knowledge extends beyond the classroom.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            Even before joining vocational school, I took the
+                            initiative to educate myself in my chosen field.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            Through self-directed learning and independent study, I gained a solid
+                            foundation of knowledge and practical skills.
+                        </p>
+                    </div>
 
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">Hello and thank you for
-                        visiting my e-portfolio! </p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">Here, you'll find a
-                        collection of my work, achievements, and experiences.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">Feel free to explore the
-                        different sections of my portfolio and learn more about who I am and what I have to offer.</p>
+                    <!-- Self-Directed Learning -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        Self-Directed Learning:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            Prior to starting vocational school, I eagerly delved into resources such as online
+                            tutorials and practical
+                            projects.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter" style="margin-top: -5px;">
+                            By taking the initiative to learn independently, I was able to familiarize myself with key
+                            concepts and
+                            techniques related to programming.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            This proactive approach allowed me to hit the ground running when I
+                            officially began my vocational education.
+                        </p>
+                    </div>
 
+                    <!-- Vocational School Experience -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        Vocational School Experience:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            My first year in vocational school has been nothing short of transformative.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter" style="margin-top: -5px;">
+                            Through engaging classes, hands-on
+                            training, and expert guidance, I have had the opportunity to deepen my understanding of
+                            programming.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            From mastering technical tools and methodologies to developing problem-solving abilities, my
+                            vocational education has equipped me with the necessary skills to excel in my chosen field.
+                        </p>
+                    </div>
 
+                    <!-- Collaborative Learning -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        Collaborative Learning:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            One of the highlights of my vocational school experience is the collaborative learning
+                            environment.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter" style="margin-top: -5px;">
+                            Working alongside my
+                            fellow students, I have gained invaluable insights and perspectives.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            Through group projects and teamwork, we have
+                            fostered a sense of camaraderie and collectively honed our skills.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            This collaborative approach has not only enhanced my
+                            technical expertise but also strengthened my interpersonal and communication skills.
+                        </p>
+                    </div>
+
+                    <!-- Continued Growth -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        Continued Growth:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            As I progress through my vocational education, I am committed to continuous growth and
+                            staying updated with the latest
+                            developments in my field.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter" style="margin-top: -5px;">
+                            I actively seek out workshops, seminars, and online courses to expand my knowledge and
+                            enhance
+                            my skill set.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            By embracing a lifelong learning mindset, I aim to stay at the forefront of industry trends
+                            and
+                            technologies.
+                        </p>
+                    </div>
+
+                    <!-- Closing -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        Closing:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            My journey as a first-year student in vocational school has been incredibly rewarding.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            From the self-directed learning
+                            that preceded my enrollment to the immersive experiences within the vocational school
+                            environment, I have acquired a
+                            solid foundation of knowledge and practical skills.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            I am excited about the opportunities that lie ahead as I continue to
+                            learn, grow, and make a positive impact in my field.
+                        </p>
+                    </div>
                 </div>
+                <p onclick="collapseItem(3_2, `Skills`)" class="titleCenterText cantPaintOverText"
+                    id="collapse32MainToggler" style="margin: 0px; margin-bottom: 10px;">Skills</p>
+                <div class="collapsible flex-display" id="collapse32" style="background-color: rgb(44, 44, 44);">
+                    <p id="codeSkillTitle" class="textCenter">My Programming Skills:</p>
 
-                <p onclick="collapseItem(1_2, `About Me`)" class="textCenterPadding titleCenterText cantPaintOverText"
-                    id="collapse12MainToggler">About Me</p>
-                <div class="collapsible flex-display" id="collapse12">
+                    <div id="skillDIV"
+                        style=" background-color: rgba(0, 0, 0, 0.4); padding: 10px; margin-bottom: 20px; border-radius: 20px; border: none;">
 
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">In the "About Me"
-                        section, you can get to know me better. I'll share my background, interests, and aspirations.
-                    </p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">You'll discover what
-                        drives me, my passion for learning, and the experiences that have shaped me both personally and
-                        professionally</p>
+                        <div class="skill" style="width: 95%;">
+                            <div class="skill-name"
+                                style="text-align: left; font-weight: normal;  margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px;  white-space: nowrap;">
+                                <p class="connected1" style="text-align: center; color: yellow;">Python - ‎</p>
+                                <p class="connected2" style="color:grey">95%</p>
+                            </div>
+                            <div class="skill-bar"
+                                style="background-color: rgba(0, 0, 0, 0.4); border: 3px solid rgba(0, 0, 0, 0.4);">
+                                <div class="skill-progress"
+                                    style="width: 95%; background-color: rgb(242, 255, 0); text-align: left; color: rgb(27, 27, 27); ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill" style="width: 95%;">
+                            <div class="skill-name"
+                                style="text-align: left; font-weight: normal; margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px;  white-space: nowrap;">
+                                <p class="connected1" style="text-align: center; color: orange;">JavaScript - ‎</p>
+                                <p class="connected2" style="color:grey">90%</p>
+                            </div>
+                            <div class="skill-bar"
+                                style="background-color: rgba(0, 0, 0, 0.4); border: 3px solid rgba(0, 0, 0, 0.4);">
+                                <div class="skill-progress"
+                                    style="width: 90%; background-color: orange; text-align: left; color: rgb(27, 27, 27); ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill" style="width: 95%;">
+                            <div class="skill-name"
+                                style="text-align: left; font-weight: normal;  margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px;  white-space: nowrap;">
+                                <p class="connected1" style="text-align: center; color: rgb(255, 94, 0);">HTML - ‎
+                                </p>
+                                <p class="connected2" style="color:grey">87%</p>
+                            </div>
+                            <div class="skill-bar"
+                                style="background-color: rgba(0, 0, 0, 0.4); border: 3px solid rgba(0, 0, 0, 0.4);">
+                                <div class="skill-progress" style="width: 87%; background-color: rgb(255, 94, 0);">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill" style="width: 95%;">
+                            <div class="skill-name"
+                                style="text-align: left; font-weight: normal;  margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px; white-space: nowrap;">
+                                <p class="connected1" style="text-align: center; color: rgb(140, 0, 255);">C# - ‎
+                                </p>
+                                <p class="connected2" style="color:grey">80%</p>
+                            </div>
+                            <div class="skill-bar"
+                                style="background-color: rgba(0, 0, 0, 0.4); border: 3px solid rgba(0, 0, 0, 0.4);">
+                                <div class="skill-progress"
+                                    style="width: 80%; background-color: rgb(140, 0, 255); text-align: left; color: rgb(27, 27, 27); ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill" style="width: 95%;">
+                            <div class="skill-name"
+                                style="text-align: left; font-weight: normal;  margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px;  white-space: nowrap;">
+                                <p class="connected1" style="text-align: center; color: rgb(26, 95, 255);">CSS - ‎
+                                </p>
+                                <p class="connected2" style="color:grey">70%</p>
+                            </div>
+                            <div class="skill-bar"
+                                style="background-color: rgba(0, 0, 0, 0.4); border: 3px solid rgba(0, 0, 0, 0.4);">
+                                <div class="skill-progress"
+                                    style="width: 70%; background-color: rgb(26, 95, 255); text-align: left; color: rgb(27, 27, 27); ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill" style="width: 95%;">
+                            <div class="skill-name"
+                                style="text-align: left; font-weight: normal; margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px;  white-space: nowrap;">
+                                <p class="connected1" style="text-align: center; color: blue;">Lua - ‎</p>
+                                <p class="connected2" style="color:grey">60%</p>
+                            </div>
+                            <div class="skill-bar"
+                                style="background-color: rgba(0, 0, 0, 0.4); border: 3px solid rgba(0, 0, 0, 0.4);">
+                                <div class="skill-progress"
+                                    style="width: 60%; background-color: blue; text-align: left; color: rgb(27, 27, 27); ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="textCenter responsiveTitle">Projects I have programmed in the past:</p>
+                        <div id="project1">
+                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli">Avaruuspeli</a><br>
+                            <img class="gameIMG" onclick="gamePressed(1)" src="../images/games/Avaruuspeli.png"
+                                alt="Avaruuspeli-kuva" width="800px">
 
 
-                </div>
+                        </div>
+                        <br>
+                        <div id="project2">
 
-                <p onclick="collapseItem(1_3, `Knowledge`)" class="textCenterPadding titleCenterText cantPaintOverText"
-                    id="collapse13MainToggler">Knowledge</p>
-                <div class="collapsible flex-display" id="collapse13">
+                        </div>
+                        <br>
+                        <div id="project3">
 
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">In the "Knowledge"
-                        section, I have curated a collection of my thoughts, insights, and reflections. </p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">You'll find articles,
-                        blog posts, and resources that delve into various topics I'm passionate about. From technology
-                        to literature, philosophy to psychology</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">I love exploring the
-                        world of ideas and sharing my perspectives.</p>
+                        </div>
 
 
+                        <div class="gameWindow">
+                            <p class="textCenter" id="gameName"></p>
+                            <p class="textCenter" id="gameDescription"></p>
 
-                </div>
-
-                <p onclick="collapseItem(1_4, `Professions`)"
-                    class="textCenterPadding titleCenterText cantPaintOverText" id="collapse14MainToggler">Professions</p>
-                <div class="collapsible flex-display" id="collapse14">
-
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">On the "Professions"
-                        page, you'll discover my professional journey and the diverse roles I have undertaken.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">From my academic
-                        achievements to my career highlights, this section showcases the range of skills and experiences
-                        I have acquired.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">Whether you're an
-                        employer, colleague, or fellow professional, I invite you to explore this page to learn more
-                        about my professional background.</p>
-
-                </div>
-
-                <p onclick="collapseItem(1_5, `Contact Me`)" class="textCenterPadding titleCenterText cantPaintOverText"
-                    id="collapse15MainToggler">Contact Me</p>
-                <div class="collapsible flex-display" id="collapse15">
-
-                    <p class="textCenterBodyText" style="margin-bottom: 0px;">If you have any questions, suggestions, or
-                        would like to get in touch with me, please visit the "Contact Me" page.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 0px;">I would love to hear from
-                        you and engage in meaningful conversations.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 0px;">I hope you enjoy
-                        navigating through my e-portfolio and find it both informative and engaging.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 0px;">Don't forget to check out
-                        the other sections mentioned above for a more comprehensive understanding of my profile.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 0px;">Feel free to reach out,
-                        and I'll get back to you as soon as possible.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px">Thank you for visiting, and I look forward to
-                        connecting with you soon!</p>
-
+                            <div onclick="gamePressed(999)" id="gameClose">
+                                <p class="textCenter cantPaintOverText"
+                                    style="background-color: rgba(99, 99, 99, 0.4); position: fixed; top: 1%; left: 1%; padding: 5px; border-radius: 10px;">
+                                    Close</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -212,28 +397,30 @@
     <div id="footerText">
         <div style="display: flex; align-items: center; justify-content: center; margin-top: 5px; margin-bottom: 5px;">
 
-            <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)" style="margin-right: 20px;margin-left: 20px;">
-                <img src="../images/discord.svg" alt="discord-icon" width="40px">
+            <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)"
+                style="margin-right: 20px;margin-left: 20px;">
+                <img src="../images/socials/discord.svg" alt="discord-icon" width="40px">
             </div>
 
-            <div id="emailHitbox" class="clickable" onclick="pressedSocials(2)" style="margin-right: 20px;">
-                <img src="../images/email.png" alt="email-icon" width="40px">
+            <div id="emailHitbox" class="clickable" onclick="pressedSocials(2)">
+                <img src="../images/socials/email.png" alt="email-icon" width="40px">
             </div>
 
-            <p class="connected2 textCenter" style="font-size: 30px; margin: 0px; white-space: normal;">Aron Särkioja 2023 ©</p>
+            <p id="footerName" class="connected2 textCenter" style="font-size: 30px; margin: 0px; white-space: normal;">
+            </p>
 
             <div id="githubHitbox" class="clickable" onclick="pressedSocials(1)" style="margin-left: 20px;">
-                <img src="../images/github-icon.png" alt="github-icon" width="40px">
+                <img src="../images/socials/github-icon.png" alt="github-icon" width="40px">
             </div>
 
             <div id="phoneHitbox" class="clickable" onclick="pressedSocials(4)" style="margin-left: 20px;">
-                <img src="../images/phone-call-icon.svg" alt="phone-call-icon" width="40px">
+                <img src="../images/socials/phone-call-icon.svg" alt="phone-call-icon" width="40px">
             </div>
 
         </div>
     </div>
     <div id="FooterCloseButton" class="finish" onclick="footerCloseOpen()">
-        <img src="../images/collapse_arrow.png" alt="open/close-icon" width="40px">
+        <img src="../images/others/collapse_arrow.png" alt="open/close-icon" width="40px">
     </div>
 
 </body>

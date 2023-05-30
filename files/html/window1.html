@@ -17,8 +17,8 @@
     <header>
         <!-- Title -->
         <div id="headerTitleDiv" onclick="goToHTML(999)">
-            <h1 id="headerTitle" class="textCenter">Aron Särkioja<h1 class="routeMainTitle textCenter"
-                    id="headerMainTitle">➪ About Me</h1>
+            <h1 id="headerTitle" class="textCenter">
+                <h1 class="routeMainTitle textCenter" id="headerMainTitle">➪ About Me</h1>
             </h1>
         </div>
 
@@ -27,29 +27,34 @@
 
             <!-- Icons -->
             <div id="iconHeader">
-                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(999)" style="margin-right: 10px;">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(999)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/home-icon.png" alt="home-icon" width="50px">
                 </button>
-                <button class="headerButtonSelected" id="headerButtonIcon" onclick="goToHTML(1)" style="margin-right: 10px;">
+                <button class="headerButtonSelected" id="headerButtonIcon" onclick="goToHTML(1)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/about_me-icon.png" alt="about_me-icon" width="50px">
                 </button>
-                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(2)" style="margin-right: 10px;">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(2)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/knowledge-icon.png" alt="knowledge-icon" width="50px">
                 </button>
-                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(3)" style="margin-right: 10px;">
+                <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(3)"
+                    style="margin-right: 10px;">
                     <img src="../images/header-icon/profession-icon.png" alt="profession-icon" width="50px">
                 </button>
                 <button class="headerButtonIcon" id="headerButtonIcon" onclick="goToHTML(4)">
                     <img src="../images/header-icon/contact_me-icon.png" alt="contact_me-icon" width="50px">
                 </button>
             </div>
-            
+
             <!-- Buttons -->
             <div id="buttonHeader">
                 <button class="headerButton" id="headerButton" onclick="goToHTML(999)" style="margin-right: 10px;">
                     <h1 class="headerButtonText" style="white-space: nowrap;">Home</h1>
                 </button>
-                <button class="headerButtonSelected" id="headerButton" onclick="goToHTML(1)" style="margin-right: 10px;">
+                <button class="headerButtonSelected" id="headerButton" onclick="goToHTML(1)"
+                    style="margin-right: 10px;">
                     <h1 class="headerButtonText selected" style="white-space: nowrap;">About Me</h1>
                 </button>
                 <button class="headerButton" id="headerButton" onclick="goToHTML(2)" style="margin-right: 10px;">
@@ -69,7 +74,7 @@
         <div class="headerItemsMobile header-right">
             <!-- Hamburger-Menu-Button -->
             <div id="navIconHitbox" onclick="navOpenClose()">
-                <img src="../images/dropdown-white.png" id="navIcon" alt="navIcon">
+                <img src="../images/others/dropdown-white.png" id="navIcon" alt="navIcon">
             </div>
         </div>
 
@@ -81,86 +86,150 @@
         <div class="textContent">
             <div class="textCenter">
 
-                <p onclick="collapseItem(1_1, `Introduction`)"
-                    class="textCenterPadding titleCenterText cantPaintOverText" id="collapse11MainToggler"
-                    style="margin: 0px; margin-bottom: 10px;">Introduction</p>
-                <div class="collapsible flex-display" id="collapse11">
+                <p onclick="collapseItem(2_1, `About Me:`)" class="textCenterPadding titleCenterText cantPaintOverText"
+                    id="collapse21MainToggler" style="margin: 0px; margin-bottom: 10px;">About Me:</p>
+                <div class="collapsible flex-display" id="collapse21">
+                    <img src="../images/others/picOfMe.png" alt="photoOfMe" id="picOfMe" style="margin-top: 20px;">
 
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">Hello and thank you for
-                        visiting my e-portfolio! </p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">Here, you'll find a
-                        collection of my work, achievements, and experiences.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">Feel free to explore the
-                        different sections of my portfolio and learn more about who I am and what I have to offer.</p>
-                </div>
+                    <!-- Basic Info part -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        Basic info of me:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            Name: Särkioja Aron
+                        </p>
+                        <p class="textCenter" style="margin-top: -5px;">
+                            Age: 17 years
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            Hey, I'm Aron, a passionate and enthusiastic individual who loves embracing new
+                            challenges and exploring the
+                            world of programming.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            I am currently a student at REDU, specializing in programming.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter" style="margin-top: -5px;">
+                            At the age of 17, I'm already on my way to building a strong foundation in the exciting
+                            world of
+                            technology.
+                        </p>
+                    </div>
 
-                <p onclick="collapseItem(1_2, `About Me`)" class="textCenterPadding titleCenterText cantPaintOverText"
-                    id="collapse12MainToggler">About Me</p>
-                <div class="collapsible flex-display" id="collapse12">
 
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">In the "About Me"
-                        section, you can get to know me better. I'll share my background, interests, and aspirations.
-                    </p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">You'll discover what
-                        drives me, my passion for learning, and the experiences that have shaped me both personally and
-                        professionally</p>
-                </div>
+                    <!-- Education part -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        Education:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            I am a dedicated student, pursuing my education.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            This specialized program allows me to
+                            focus on honing my programming skills and gaining practical knowledge in the field.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            I am actively engaged in courses
+                            that cover programming languages, software development, and problem-solving techniques.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            I'm excited to be a part of this
+                            dynamic learning environment and continue to expand my knowledge.
+                        </p>
+                    </div>
 
-                <p onclick="collapseItem(1_3, `Knowledge`)" class="textCenterPadding titleCenterText cantPaintOverText"
-                    id="collapse13MainToggler">Knowledge</p>
-                <div class="collapsible flex-display" id="collapse13">
+                    <!-- Skills & Interests -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        Skills & Interests:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            My vocational school experience has enabled me to develop a wide range of skills related to
+                            programming.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            I have a strong
+                            passion for coding and enjoy diving into projects that allow me to apply my knowledge
+                            creatively.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            I have gained
+                            expertise in languages such as C#, Python, Javascript, CSS, HTML and Lua, as well as
+                            proficiency in
+                            problem-solving and logical
+                            thinking.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            The world of technology constantly evolves, and I strive to stay up to date with the latest
+                            trends and
+                            advancements in the field.
+                        </p>
+                    </div>
 
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">In the "Knowledge"
-                        section, I have curated a collection of my thoughts, insights, and reflections. </p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">You'll find articles,
-                        blog posts, and resources that delve into various topics I'm passionate about. From technology
-                        to literature, philosophy to psychology</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">I love exploring the
-                        world of ideas and sharing my perspectives.</p>
-                </div>
+                    <!-- Future Goals: -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        Future Goals:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            Looking ahead, I have ambitious goals and dreams within the programming realm.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            I aspire to pursue a career as a
+                            professional programmer or software engineer, working on exciting projects that make a
+                            real-world impact.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            I plan to
+                            continue my education by exploring opportunities for further studies in computer science or
+                            related fields.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            My ultimate
+                            aim is to contribute to the ever-evolving world of technology and help shape a better future
+                            through my skills and
+                            expertise.
+                        </p>
+                    </div>
 
-                <p onclick="collapseItem(1_4, `Professions`)"
-                    class="textCenterPadding titleCenterText cantPaintOverText" id="collapse14MainToggler">Professions</p>
-                <div class="collapsible flex-display" id="collapse14">
-
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">On the "Professions"
-                        page, you'll discover my professional journey and the diverse roles I have undertaken.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">From my academic
-                        achievements to my career highlights, this section showcases the range of skills and experiences
-                        I have acquired.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">Whether you're an
-                        employer, colleague, or fellow professional, I invite you to explore this page to learn more
-                        about my professional background.</p>
-                </div>
-
-                <p onclick="collapseItem(1_5, `Contact Me`)" class="textCenterPadding titleCenterText cantPaintOverText"
-                    id="collapse15MainToggler">Contact Me</p>
-                <div class="collapsible flex-display" id="collapse15">
-
-                    <p class="textCenterBodyText" style="margin-bottom: 0px;">If you have any questions, suggestions, or
-                        would like to get in touch with me, please visit the "Contact Me" page.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 0px;">I would love to hear from
-                        you and engage in meaningful conversations.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 0px;">I hope you enjoy
-                        navigating through my e-portfolio and find it both informative and engaging.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 0px;">Don't forget to check out
-                        the other sections mentioned above for a more comprehensive understanding of my profile.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 0px;">Feel free to reach out,
-                        and I'll get back to you as soon as possible.</p>
-                    <br>
-                    <p class="textCenterBodyText" style="margin-top: 0px">Thank you for visiting, and I look forward to
-                        connecting with you soon!</p>
+                    <!-- Closing -->
+                    <h1 class="textCenter infoTitle" style="font-size: 30px; margin-bottom: 5px;">
+                        Closing:
+                    </h1>
+                    <div class="infoCategory">
+                        <p class="textCenter">
+                            Thank you for taking the time to learn more about me.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            I'm excited about what lies ahead in my programming journey and
+                            the endless possibilities in the tech industry.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            If you'd like to connect or have any
+                            questions, please don't hesitate to
+                            reach out.
+                        </p>
+                        <br class="hiddenInfoBR">
+                        <p class="textCenter">
+                            Let's embark on this coding adventure together!
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,30 +272,31 @@
     <div id="footerText">
         <div style="display: flex; align-items: center; justify-content: center; margin-top: 5px; margin-bottom: 5px;">
 
-            <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)" style="margin-right: 20px;margin-left: 20px;">
-                <img src="../images/discord.svg" alt="discord-icon" width="40px">
+            <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)"
+                style="margin-right: 20px;margin-left: 20px;">
+                <img src="../images/socials/discord.svg" alt="discord-icon" width="40px">
             </div>
 
-            <div id="emailHitbox" class="clickable" onclick="pressedSocials(2)" style="margin-right: 20px;">
-                <img src="../images/email.png" alt="email-icon" width="40px">
+            <div id="emailHitbox" class="clickable" onclick="pressedSocials(2)">
+                <img src="../images/socials/email.png" alt="email-icon" width="40px">
             </div>
 
-            <p class="connected2 textCenter" style="font-size: 30px; margin: 0px; white-space: normal;">Aron Särkioja 2023 ©</p>
+            <p id="footerName" class="connected2 textCenter" style="font-size: 30px; margin: 0px; white-space: normal;">
+            </p>
 
             <div id="githubHitbox" class="clickable" onclick="pressedSocials(1)" style="margin-left: 20px;">
-                <img src="../images/github-icon.png" alt="github-icon" width="40px">
+                <img src="../images/socials/github-icon.png" alt="github-icon" width="40px">
             </div>
 
             <div id="phoneHitbox" class="clickable" onclick="pressedSocials(4)" style="margin-left: 20px;">
-                <img src="../images/phone-call-icon.svg" alt="phone-call-icon" width="40px">
+                <img src="../images/socials/phone-call-icon.svg" alt="phone-call-icon" width="40px">
             </div>
 
         </div>
     </div>
     <div id="FooterCloseButton" class="finish" onclick="footerCloseOpen()">
-        <img src="../images/collapse_arrow.png" alt="open/close-icon" width="40px">
+        <img src="../images/others/collapse_arrow.png" alt="open/close-icon" width="40px">
     </div>
-
 </body>
 
 </html>
