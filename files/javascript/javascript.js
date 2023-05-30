@@ -62,14 +62,26 @@ function navOpenClose() {
 
 // Navigate to a html-document by id
 function goToHTML(id) {
-  // If the id is not 999, navigate to the window with the id
-  if (id != 999) {
-    const windowKey = ("window" + id + ".html");
-    window.location.href = windowKey;
+  // File end type
+  const end = ".html"
+
+  // List of windows in the e-portfolio
+  const windows = {
+    1: "about-me",
+    2: "knowledge",
+    3: "professions",
+    4: "contact-me"
   }
-  // If it is however, navigate to home
-  else {
-    window.location.href = "e-portfolio.html";
+  
+  // Check if id is in windows-const
+  if(id in windows){
+    window.location.href = windows[id] + end;
+  }
+
+  // If it isn't, navigate to Home
+  else
+  {
+    window.location.href = "e-portfolio" + end;
   }
 }
 
@@ -195,34 +207,37 @@ function footerCloseOpen() {
 }
 
 function pressedSocials(id) {
-  const email = "aronsarkioja7@gmail.com";
 
+  // List of my socials
   const socials = {
-    1: "https://github.com/Arskiz",       // Github
-    2: "https://mail.google.com/mail/u/0/#inbox?compose=new",  // Email
-    3: "Arskiz#3257",                      // Discord
-    4: "+358 400 291 062"                  // Phone
+    1: "https://github.com/Arskiz",         // Github
+    2: "https://mail.google.com/mail/u/0/#inbox?compose=new",  // Email's url
+    3: "Arskiz#3257",                       // Discord
+    4: "+358 400 291 062",                  // Phone
+    5: "aronsarkioja7@gmail.com"            // Email
   };
 
+  // If id is in socials-list:
   if (id in socials) {
     const social = socials[id];
     if (id == 1) {
       window.location.href = social;
     }
     if (id === 2) {
-      alert("Send an email to: " + email + "!");
+      alert("Send an email to: " + socials[5] + "!");
       window.location.href = social;
     } else if (id === 4) {
       alert("Add me on WhatsApp/Telegram or send me a message to this number: " + social);
     } else if (id === 3) {
       alert("Add me on Discord: " + social);
     }
+  // If it isn't, alert that the id isn't supported
   } else {
     alert("Unsupported ID!");
   }
 }
 
-// Tallenna Contact Me:n muuttujat muistiin
+// Save Contact Me's variables to localStorage
 function saveInputs() {
   const empty = null;
   var firstName = document.getElementById("firstName").value;
@@ -244,7 +259,7 @@ function saveInputs() {
   }
 }
 
-// Lataa muistista Contact Me:n muuttujat
+// Load Contact Me's variables from localStorage
 function loadInputs() {
   document.getElementById("firstName").value = localStorage.getItem("firstName");
   document.getElementById("lastName").value = localStorage.getItem("lastName");
@@ -253,7 +268,7 @@ function loadInputs() {
   console.log("Values Loaded!")
 }
 
-// Jos peliä painetaan, niin:
+// If game is pressed, then:
 function gamePressed(id) {
   const games = {
     1: "Avaruuspeli",
@@ -261,16 +276,19 @@ function gamePressed(id) {
     3: "COMING SOON"
   }
 
+  // If the id is in the games-list
   if (id in games) {
     const foundResults = document.getElementsByClassName("gameWindow");
     for (let i = 0; i < foundResults.length; i++) {
       foundResults[i].style.display = "flex";
     }
   }
-  if (id === "999") {
-    const foundResults = document.getElementsByClassName("gameWindow");
-    for (let i = 0; i < foundResults.length; i++) {
-      foundResults[i].style.display = "none";
-    }
+  // If it isn't, close the window
+  else
+  {
+      const foundResults = document.getElementsByClassName("gameWindow");
+      for (let i = 0; i < foundResults.length; i++) {
+        foundResults[i].style.display = "none";
+      }
   }
 }
