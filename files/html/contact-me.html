@@ -152,11 +152,14 @@
     <!-- Bottom Flexbox (Footer) -->
     <div id="footerText">
         <div style="display: flex; align-items: center; justify-content: center; margin-top: 5px; margin-bottom: 5px;">
-
+            <div style="position: fixed; left: 1%;" onclick="toggleAudio()">
+                <p id="AudioButton" class="textCenter cantPaintOverText clickable" style="color: rgb(255, 71, 71);">AUDIO</p>
+            </div>
             <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)"
                 style="margin-right: 20px;margin-left: 20px;">
                 <img src="../images/socials/discord.svg" alt="discord-icon" width="40px">
             </div>
+
 
             <div id="emailHitbox" class="clickable" onclick="pressedSocials(2)">
                 <img src="../images/socials/email.png" alt="email-icon" width="40px">
