@@ -81,7 +81,7 @@ function goToHTML(id) {
   // If it isn't, navigate to Home
   else
   {
-    window.location.href = "e-portfolio" + end;
+    window.location.href = "home" + end;
   }
 }
 
@@ -211,7 +211,7 @@ function pressedSocials(id) {
   // List of my socials
   const socials = {
     1: "https://github.com/Arskiz",         // Github
-    2: "https://mail.google.com/mail/u/0/#inbox?compose=new",  // Email's url
+    2: "mailto:aronsarkioja7@gmail.com",  // Email's url
     3: "Arskiz#3257",                       // Discord
     4: "+358 400 291 062",                  // Phone
     5: "aronsarkioja7@gmail.com"            // Email
@@ -224,7 +224,7 @@ function pressedSocials(id) {
       window.location.href = social;
     }
     if (id === 2) {
-      alert("Send an email to: " + socials[5] + "!");
+      alert("Press `OK` to get redirected to Google Mail: " + socials[5] + "!");
       window.location.href = social;
     } else if (id === 4) {
       alert("Add me on WhatsApp/Telegram or send me a message to this number: " + social);
@@ -300,5 +300,53 @@ function handleGame1ElementHover(status){
   else
   {
     game1LinkText.innerHTML = "Avaruuspeli";
+  }
+}
+
+// Send contact-me's input fields to me:
+function submitFile(){
+  // Set-up variables
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  // Pack the values to a package
+  var package = {
+    sentFirstName: firstName,
+    sentlastName: lastName,
+    sentEmail: email,
+    sentMessage: message
+  }
+
+  // Send the values to me, (possibly later with PHP)
+  localStorage.setItem("sentPackage", JSON.stringify(package));
+  if(localStorage.getItem("sentPackage") !== null){
+    console.log("Sent!");
+    alert(
+    ` 
+    Entered Values:
+    -------------------
+    First Name: ${firstName}
+    Last Name: ${lastName}
+    Email: ${email}
+    Message: ${message}
+    -------------------
+    You will be redirected to Google Mail now.
+    `);
+    
+    // Redirect to Google Mail with the input fields already filled
+    const subject = `${firstName} ${lastName} - Contact Request`;
+    const body = 
+`Full Name: ${firstName} ${lastName}
+Email: ${email}
+
+${message}`;
+    window.location.href = `mailto:aronsarkioja7@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+  else
+  {
+    alert("Something went wrong with sending the package...");
+    console.log("Something went wrong with sending the package...");
   }
 }
