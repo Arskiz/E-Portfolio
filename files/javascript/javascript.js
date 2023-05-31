@@ -1,7 +1,8 @@
 let hamburger = document.getElementById("navIconHitbox");
 const mobileNavigation = document.getElementById("MobileNavigation");
 
-
+//Audio
+var isPlayingBgMusic = null;
 
 // Mobile Navigation
 let isOpened = false;
@@ -93,6 +94,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var siteContent = document.getElementById('transition-fade');
   var footerTextElement = document.getElementById("footerName");
   var headerTextElement = document.getElementById("headerTitle");
+  isPlayingBgMusic = false;
+
 
   // Check if in localstorage the Contact Me-window's inputs arent null
   if (document.title === "Contact Me, Aron Särkioja") {
@@ -145,11 +148,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // Smooth load:
   siteContent.style.opacity = '1';
 
-  // Set up footer's text for the name
+  // Set up footer's text for the name:
   footerTextElement.innerHTML = footerNameText;
 
-  // Set up header's text for the name
+  // Set up header's text for the name:
   headerTextElement.innerHTML = headerNameText;
+  console.log(isPlayingBgMusic);
+  // Play audio if audio-bool is TRUE:
+  if(isPlayingBgMusic === true){
+    playSound("../sound/bgSound.mp3");
+  }
 
 });
 
@@ -166,23 +174,34 @@ function collapseItem(id, name) {
   if (currentCollapse && currentCollapseText) {
     // Boolean check for the collapse
     if (collapses["collapse" + id] !== true) {
+      currentCollapse.style.maxHeight = currentCollapse.scrollHeight + "px"; // Set the max-height to the element's scroll height
       currentCollapse.classList.remove("hidden");
-      currentCollapse.classList.add("flex-display");
+      currentCollapse.classList.add("collapsing"); // Add collapsing class for smooth animation
+
+      setTimeout(function() {
+        currentCollapse.style.maxHeight = null; // Remove the max-height to allow content to expand
+      }, 300); // Adjust the delay to match the transition duration
+
       if (useCollapseMarks) {
         currentCollapseText.innerHTML = openedCollapseMark + " " + name + " " + openedCollapseMark;
       }
-
     } else {
-      currentCollapse.classList.remove("flex-display");
-      currentCollapse.classList.add("hidden");
+      currentCollapse.style.maxHeight = currentCollapse.scrollHeight + "px"; // Set the max-height to the element's scroll height before collapsing
+      currentCollapse.classList.add("collapsing"); // Add collapsing class for smooth animation
+
+      setTimeout(function() {
+        currentCollapse.style.maxHeight = "0"; // Set the max-height to 0 to collapse the element
+      }, 10); // Adjust the delay to allow the content to expand before collapsing
+
       if (useCollapseMarks) {
         currentCollapseText.innerHTML = closedCollapseMark1 + name + closedCollapseMark2;
       }
     }
+
     console.log(collapses);
     collapses["collapse" + id] = !collapses["collapse" + id];
   } else {
-    console.log("Element with id", div, "or", togglerText, "not found. look for them in html lol");
+    console.log("Element with id", div, "or", togglerText, "not found. Look for them in HTML.");
   }
 }
 
@@ -289,20 +308,6 @@ function redirect(site){
   window.location.href = site;
 }
 
-var game1LinkText = document.getElementById("game1Link");
-game1LinkText.onmouseover = handleGame1ElementHover("yes");
-game1LinkText.innerHTML = "Avaruuspeli";
-
-function handleGame1ElementHover(status){
-  if(status === "yes"){
-    game1LinkText.innerHTML = "[ Click to redirect ]";
-  }
-  else
-  {
-    game1LinkText.innerHTML = "Avaruuspeli";
-  }
-}
-
 // Send contact-me's input fields to me:
 function submitFile(){
   // Set-up variables
@@ -332,7 +337,7 @@ function submitFile(){
     Email: ${email}
     Message: ${message}
     -------------------
-    You will be redirected to Google Mail now.
+    You will be redirected to Your Commonly Used E-mail Website now.
     `);
     
     // Redirect to Google Mail with the input fields already filled
@@ -349,4 +354,48 @@ ${message}`;
     alert("Something went wrong with sending the package...");
     console.log("Something went wrong with sending the package...");
   }
+}
+
+var audio; // Declare the audio variable globally
+
+// Background sound player:
+function playSound(soundUrl) {
+  if(audio){
+    audio.play();
+  }
+  else
+  {
+    audio = new Audio(soundUrl);
+    audio.play();
+  }
+}
+
+// Background sound stopper:
+function stopSound() {
+  if (audio) {
+    audio.pause();
+  }
+}
+
+// Set Audio Volume
+function setAudioVolume(amount){
+  if(audio) {
+    audio.volume = amount;
+  }
+}
+
+// Toggle Audio
+function toggleAudio() {
+  var audioButtonTextElement = document.getElementById("AudioButton");
+  if (!isPlayingBgMusic) {
+    playSound("../sound/bgSound.mp3");
+    audioButtonTextElement.style.color = "rgb(108, 255, 71)";
+  }
+  else
+  {
+    stopSound();
+    audioButtonTextElement.style.color = "rgb(255, 71, 71)";
+  }
+  isPlayingBgMusic = !isPlayingBgMusic;
+  console.log("is playing music: " + isPlayingBgMusic);
 }

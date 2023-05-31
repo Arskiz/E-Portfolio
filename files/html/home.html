@@ -171,7 +171,6 @@
                     <br class="hiddenInfoBR">
                     <p class="textCenterBodyText" style="margin-top: 0px; margin-bottom: 5px;">Thank you for visiting, and I look forward to
                         connecting with you soon!</p>
-
                 </div>
             </div>
         </div>
@@ -212,8 +211,11 @@
 
     <!-- Bottom Flexbox (Footer) -->
     <div id="footerText">
+        
         <div style="display: flex; align-items: center; justify-content: center; margin-top: 5px; margin-bottom: 5px;">
-
+            <div style="position: fixed; left: 1%;" onclick="toggleAudio()">
+                <p id="AudioButton" class="textCenter cantPaintOverText clickable" style="color: rgb(255, 71, 71);">AUDIO</p>
+            </div>
             <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)"
                 style="margin-right: 20px;margin-left: 20px;">
                 <img src="../images/socials/discord.svg" alt="discord-icon" width="40px">
@@ -223,7 +225,7 @@
                 <img src="../images/socials/email.png" alt="email-icon" width="40px">
             </div>
 
-            <p id="footerName" class="connected2 textCenter" style="font-size: 30px; margin: 0px; white-space: normal;">
+            <p id="footerName" class="textCenter" style="font-size: 30px; margin: 0px; white-space: normal;">
             </p>
 
             <div id="githubHitbox" class="clickable" onclick="pressedSocials(1)" style="margin-left: 20px;">

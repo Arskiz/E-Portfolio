@@ -428,7 +428,7 @@ header {
     transition-duration: 0.2s;
 }
 
-#MobileNavigation #buttonDivSelected {
+#MobileNavigation, #buttonDivSelected {
     border: 1px solid transparent;
     background-color: transparent;
     transition-property: background-color;
@@ -447,15 +447,29 @@ header {
     align-items: center;
 }
 
-.hidden {
+.collapsing {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .hidden {
     display: none;
-    transition: display 0.3s;
+    transition: max-height 0.3s ease;
+  }
+  
+  /* Optional styles */
+  .flex-display {
+    display: flex;
+  }
+  
+
+#collapseText {
+    transition: opacity 0.3s ease; /* Add transition for smooth opacity change */
 }
 
-.flex-display {
-    display: flex;
-    transition: display 0.3s;
-}
+
+  
+  
 
 .contactMe {
     display: flex;
