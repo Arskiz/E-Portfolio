@@ -401,7 +401,7 @@ header {
     justify-content: center;
 }
 
-#MobileNavigation #MobNavTitle {
+#MobNavTitle {
     color: rgb(177, 177, 177);
     font-weight: bold;
     font-size: 30px;
@@ -411,7 +411,7 @@ header {
     -ms-user-select: none;
 }
 
-#MobileNavigation #buttonDiv {
+#buttonDiv {
     border: 1px solid transparent;
     background-color: transparent;
     transition-property: background-color;
@@ -422,13 +422,13 @@ header {
     -ms-user-select: none;
 }
 
-#MobileNavigation #buttonDiv:hover {
+#buttonDiv:hover {
     background-color: rgba(43, 43, 43, 0.9);
     transition-property: background-color;
     transition-duration: 0.2s;
 }
 
-#MobileNavigation, #buttonDivSelected {
+#buttonDivSelected {
     border: 1px solid transparent;
     background-color: transparent;
     transition-property: background-color;
