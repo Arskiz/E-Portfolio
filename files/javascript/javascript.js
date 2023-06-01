@@ -22,6 +22,7 @@ var collapses = {
   // Collapses (KNOWLEDGE PAGE)
   collapse31: true,
   collapse32: true,
+  collapse33: true,
 
   // Collapses (PROFESSIONS PAGE)
   collapse41: true,

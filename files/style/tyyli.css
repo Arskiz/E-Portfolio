@@ -479,7 +479,7 @@ header {
 }
 
 .contactMeForm {
-    background-color: rgb(48, 48, 48);
+    background-color: rgba(46, 46, 46, 0.4);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -527,15 +527,15 @@ header {
 
 .formButton {
     padding: 5px;
-    border-radius: 10px;
     border: 4px solid rgb(36, 36, 36);
-    background-color: white;
+    background-color: rgba(53, 53, 53, 0.4);
+    color: rgba(255, 255, 255, 0.4);
     transition-property: background-color;
     transition-duration: 0.4s;
 }
 
 .formButton:hover {
-    background-color: rgb(130, 130, 130);
+    background-color: rgba(116, 116, 116, 0.4);
 }
 
 .formButton:active {
@@ -545,10 +545,10 @@ header {
 .formInput {
     border-radius: 5px;
     border: 4px solid rgb(36, 36, 36);
-    font-family: 'Bree Serif';
-    font-size: 22px;
+    font-family: 'Arial';
     font-size: 20px;
-    background-color: white;
+    color: rgba(255, 255, 255, 0.637);
+    background-color: rgba(53, 53, 53, 0.4);
 
     transition-property: all;
     transition-duration: 0.2s;
@@ -556,7 +556,7 @@ header {
 
 .formInput:hover {
     border-radius: 10px;
-    background-color: rgb(179, 179, 179);
+    background-color: rgba(46, 46, 46, 0.4);
 }
 
 .form-row {
@@ -568,6 +568,7 @@ header {
 
 label {
     margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.637);
 }
 
 .skill {
@@ -587,12 +588,13 @@ label {
 
 .skill-bar {
     height: 20px;
-    border-radius: 4px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
 .skill-progress {
     height: 100%;
+    border-radius: 10px;
 }
 
 .collapsible {
@@ -641,6 +643,8 @@ label {
 
 .infoCategory {
     padding: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: #2c2c2c;
@@ -675,17 +679,23 @@ label {
     user-select: none;
 }
 
+.contact-me-item{
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.contact-me-item:hover{
+    border-bottom: 3px solid;
+    cursor: pointer;
+}
+
+#buttonDivContactME{
+    margin-left: 2%;
+}
+
 @media (max-width: 560px) {
 
-    .contactMe {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .contactMeForm {
-        display: inline-block;
-    }
 
     .form-row {
         display: flex;
@@ -715,8 +725,12 @@ label {
         padding-right: 5%;
     }
 
-    .responsiveTitle{
+    .responsiveTitle:not(#socials){
         font-size: 30px;
+    }
+
+    #contact-me-form-div{
+        padding: 0%;
     }
 
     #headerTitleDiv {
@@ -805,14 +819,24 @@ label {
         font-size: 30px;
     }
 
-    #codeSkillTitle, .responsiveTitle {
-        font-size: 20px;
+    #codeSkillTitle, .responsiveTitle:not(#socials) {
+        font-size: 30px;
     }
 
     .gameIMG {
         width: 500px;
     }
 
+    .contactMe{
+        flex-direction: column;
+    }
+    .contactMeInnerButtons{
+        display: flex;
+    }
+
+    #buttonDivContactME{
+        margin-left: 0%;
+    }
 
 }
 
@@ -823,7 +847,7 @@ label {
         font-size: 30px;
     }
 
-    #codeSkillTitle, .responsiveTitle {
+    #codeSkillTitle, .responsiveTitle:not(#socials) {
         font-size: 20px;
     }
 

@@ -83,35 +83,68 @@
     <!-- Text Area (Center Flexbox)  -->
     <div class="flex-middle-item left-right-item-middle" style="background-color: transparent;">
         <div class="textContent">
-            <p class="textCenter"
-                style="color: grey; font-size: 40px; font-weight: bold;  font-family: Arial, Helvetica, sans-serif;">
-                Contact Me via form:</p>
+            <p class="textCenter contactMeTitle"
+                style="color: orange; font-size: 30px; font-weight: bold;  font-family: Arial, Helvetica, sans-serif;">
+                You can contact me using the following options:</p>
             <div class="contactMe">
-                <form class="contactMeForm textLeft"
-                    style="color: rgb(92, 92, 92); font-family: Arial, Helvetica, sans-serif;" method="POST" action="">
-                    <div class="form-row">
-                        <label for="firstName">First Name:</label>
-                        <input class="formInput" type="text" id="firstName" name="firstName" required>
+                <div style="padding-right: 2%;" id="contact-me-form-div">
+                    <p id="socials" class="textCenter responsiveTitle" style="color: rgb(91, 156, 255);">Fill up a form:</p>
+                    <form class="contactMeForm textLeft"
+                        style="color: rgb(92, 92, 92); font-family: Arial, Helvetica, sans-serif;" method="POST"
+                        action="">
+                        <div class="form-row">
+                            <label for="firstName">First Name:</label>
+                            <input class="formInput" type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="lastName">Last Name:</label>
+                            <input class="formInput" type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Email:</label>
+                            <input class="formInput" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="message">Message:</label>
+                            <textarea class="formInput" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <input type="button" class="formButton" onclick="saveInputs()" value="Save Inputs">
+                        </div>
+                        <div class="form-row">
+                            <input type="button" class="formButton" value="Submit" onclick="submitFile()">
+                        </div>
+                    </form>
+                </div>
+                <p class="textCenter responsiveTitle" style="color: red;" id="socials"> OR </p>
+                <div id="buttonDivContactME" display="normal">
+                    <p class="textCenter responsiveTitle" style="color: rgb(91, 156, 255);">Use the following buttons:</p>
+                    <div style="background-color: rgba(46, 46, 46, 0.4); border-radius: 20px; padding: 20px;">
+                        <div style="display: flex; justify-content: center; align-items: center;">
+                            <img src="../images/socials/phone-call-icon.svg" width="50px" alt="phone-logo">
+                            <p class="textCenter responsiveTitle contact-me-item" onclick="pressedSocials(4)"
+                                style="color: green;" id="socials">
+                                Phone
+                            </p>
+                        </div>
+                        <div style="display: flex; justify-content: center; align-items: center;">
+                            <img src="../images/socials/discord.svg" width="50px" alt="phone-logo">
+                            <p class="textCenter responsiveTitle contact-me-item" onclick="pressedSocials(3)"
+                            style="color: rgb(73, 73, 255);" id="socials">
+                            Discord
+                        </p>
+                        </div>
+                        <div style="display: flex; justify-content: center; align-items: center;">
+                            <img src="../images/socials/email.png" height="50px" alt="phone-logo">
+                            <p class="textCenter responsiveTitle contact-me-item" onclick="pressedSocials(2)"
+                            style="color: rgb(206, 206, 206);" id="socials">
+                            E-mail
+                        </p>
+                        </div>
+                        
+                        
                     </div>
-                    <div class="form-row">
-                        <label for="lastName">Last Name:</label>
-                        <input class="formInput" type="text" id="lastName" name="lastName" required>
-                    </div>
-                    <div class="form-row">
-                        <label for="email">Email:</label>
-                        <input class="formInput" type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-row">
-                        <label for="message">Message:</label>
-                        <textarea class="formInput" id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <div class="form-row">
-                        <input type="button" class="formButton" onclick="saveInputs()" value="Save Inputs">
-                    </div>
-                    <div class="form-row">
-                        <input type="button" class="formButton" value="Submit" onclick="submitFile()">
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

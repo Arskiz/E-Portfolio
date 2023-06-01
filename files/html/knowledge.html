@@ -86,7 +86,7 @@
         <div class="textContent">
             <div class="textCenter">
                 <p onclick="collapseItem(3_1, `Knowledge`)" class="titleCenterText cantPaintOverText"
-                    id="collapse31MainToggler" style="margin: 0px; margin-bottom: 10px;">Knowledge</p>
+                    id="collapse31MainToggler" style="margin: 0px; margin-bottom: 5px; margin-top: 10px;">Knowledge</p>
                 <div class="collapsible flex-display" id="collapse31">
 
                     <!-- Basic Knowledge -->
@@ -234,7 +234,7 @@
 
                 <!-- Skills Bar-->
                 <p onclick="collapseItem(3_2, `Skills`)" class="titleCenterText cantPaintOverText"
-                    id="collapse32MainToggler" style="margin: 0px; margin-bottom: 10px;">Skills</p>
+                    id="collapse32MainToggler" style="margin: 0px; margin-bottom: 5px; margin-top: 10px;">Skills</p>
                 <div class="collapsible flex-display" id="collapse32" style="background-color: rgb(44, 44, 44);">
                     <p id="codeSkillTitle" class="textCenter">My Programming Skills:</p>
 
@@ -390,27 +390,44 @@
                     </div>
 
                     <div>
-                        <p id="game1Link" class="textCenter responsiveTitle">Projects I have programmed in the past:</p>
-                        <div id="project1"
-                            style="background-color: rgb(51, 51, 51); border-radius: 20px; padding: 20px; padding-top: 0px;">
-                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli" style="text-decoration: none;"><p id="codeSkillTitle" class="textCenter" style="margin-bottom: -20px;">Avaruuspeli:</p></a><br>
+                        <p onclick="collapseItem(3_3, `Knowledge`)" class="titleCenterText cantPaintOverText"
+                        id="collapse33MainToggler" style="margin: 0px; margin-bottom: 5px; margin-top: 10px;">Projects I have programmed in the past:</p>
+                        <div class="collapsible flex-display" id="collapse33">
+                            <div id="project1"
+                            style="background-color: rgb(51, 51, 51); border-radius: 20px; padding: 20px; padding-top: 20px; margin-top: 30px;">
+                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli"
+                                style="text-decoration: none;">
+                                <p id="codeSkillTitle" class="textCenter" style="margin-top: -20px; color: orange;">Python:</p>
+                                <p id="codeSkillTitle" class="textCenter" style="margin-bottom: -20px; color: rgb(255, 199, 96);">Space Shooter Game:</p>
+                                
+                            </a><br>
                             <img class="gameIMG" onclick="gamePressed(1)" src="../images/games/Avaruuspeli.png"
                                 alt="Projekti1-kuva" width="800px">
 
 
                         </div>
                         <br>
-                        <div id="project2" style="background-color: rgb(51, 51, 51); border-radius: 20px; padding: 20px; padding-top: 0px;">
-                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli" style="text-decoration: none;"><p id="codeSkillTitle" class="textCenter" style="margin-bottom: -20px;">Projekti2 - Later:</p></a><br>
-                            <img class="gameIMG" onclick="gamePressed(2)" src=none
-                                alt="Projekti2-kuva" width="800px">
+                        <div id="project2"
+                            style="background-color: rgb(51, 51, 51); border-radius: 20px; padding: 20px; padding-top: 0px;">
+                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli"
+                                style="text-decoration: none;">
+                                <p id="codeSkillTitle" class="textCenter" style="margin-bottom: -20px;">Projekti2 -
+                                    Later:</p>
+                            </a><br>
+                            <img class="gameIMG" onclick="gamePressed(2)" src=none alt="Projekti2-kuva" width="800px">
                         </div>
                         <br>
-                        <div id="project3" style="background-color: rgb(51, 51, 51); border-radius: 20px; padding: 20px; padding-top: 0px;">
-                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli" style="text-decoration: none;"><p id="codeSkillTitle" class="textCenter" style="margin-bottom: -20px;">Projekti3 - Later:</p></a><br>
-                            <img class="gameIMG" onclick="gamePressed(3)" src=none
-                                alt="Projekti3-kuva" width="800px">
+                        <div id="project3"
+                            style="background-color: rgb(51, 51, 51); border-radius: 20px; padding: 20px; padding-top: 0px;">
+                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli"
+                                style="text-decoration: none;">
+                                <p id="codeSkillTitle" class="textCenter" style="margin-bottom: -20px;">Projekti3 -
+                                    Later:</p>
+                            </a><br>
+                            <img class="gameIMG" onclick="gamePressed(3)" src=none alt="Projekti3-kuva" width="800px">
                         </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
