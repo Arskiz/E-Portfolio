@@ -1,9 +1,6 @@
 let hamburger = document.getElementById("navIconHitbox");
 const mobileNavigation = document.getElementById("MobileNavigation");
 
-//Audio
-var isPlayingBgMusic = null;
-
 // Mobile Navigation
 let isOpened = false;
 let footerOpened = null;
@@ -19,12 +16,18 @@ var collapses = {
   collapse14: true,
   collapse15: true,
 
+  // Collapses (ABOUT ME PAGE)
+  collapse21: true,
+
   // Collapses (KNOWLEDGE PAGE)
   collapse31: true,
   collapse32: true,
 
-  // Collapses (ABOUT ME PAGE)
-  collapse21: true,
+  // Collapses (PROFESSIONS PAGE)
+  collapse41: true,
+  collapse42: true,
+  collapse43: true,
+  collapse44: true,
 };
 
 
@@ -94,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var siteContent = document.getElementById('transition-fade');
   var footerTextElement = document.getElementById("footerName");
   var headerTextElement = document.getElementById("headerTitle");
-  isPlayingBgMusic = false;
 
 
   // Check if in localstorage the Contact Me-window's inputs arent null
@@ -153,11 +155,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Set up header's text for the name:
   headerTextElement.innerHTML = headerNameText;
-  console.log(isPlayingBgMusic);
-  // Play audio if audio-bool is TRUE:
-  if(isPlayingBgMusic === true){
-    playSound("../sound/bgSound.mp3");
-  }
 
 });
 
@@ -175,12 +172,12 @@ function collapseItem(id, name) {
     // Boolean check for the collapse
     if (collapses["collapse" + id] !== true) {
       currentCollapse.style.maxHeight = currentCollapse.scrollHeight + "px"; // Set the max-height to the element's scroll height
-      currentCollapse.classList.remove("hidden");
       currentCollapse.classList.add("collapsing"); // Add collapsing class for smooth animation
 
       setTimeout(function() {
         currentCollapse.style.maxHeight = null; // Remove the max-height to allow content to expand
-      }, 300); // Adjust the delay to match the transition duration
+        currentCollapse.style.opacity = "1";
+      }, 200); // Adjust the delay to match the transition duration
 
       if (useCollapseMarks) {
         currentCollapseText.innerHTML = openedCollapseMark + " " + name + " " + openedCollapseMark;
@@ -191,8 +188,9 @@ function collapseItem(id, name) {
 
       setTimeout(function() {
         currentCollapse.style.maxHeight = "0"; // Set the max-height to 0 to collapse the element
+        currentCollapse.style.opacity = "0";
       }, 10); // Adjust the delay to allow the content to expand before collapsing
-
+      
       if (useCollapseMarks) {
         currentCollapseText.innerHTML = closedCollapseMark1 + name + closedCollapseMark2;
       }
@@ -382,20 +380,4 @@ function setAudioVolume(amount){
   if(audio) {
     audio.volume = amount;
   }
-}
-
-// Toggle Audio
-function toggleAudio() {
-  var audioButtonTextElement = document.getElementById("AudioButton");
-  if (!isPlayingBgMusic) {
-    playSound("../sound/bgSound.mp3");
-    audioButtonTextElement.style.color = "rgb(108, 255, 71)";
-  }
-  else
-  {
-    stopSound();
-    audioButtonTextElement.style.color = "rgb(255, 71, 71)";
-  }
-  isPlayingBgMusic = !isPlayingBgMusic;
-  console.log("is playing music: " + isPlayingBgMusic);
 }

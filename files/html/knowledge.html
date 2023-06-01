@@ -240,12 +240,12 @@
 
                     <!-- Code Language Skills -->
                     <div id="skillDIV"
-                        style=" background-color: rgba(0, 0, 0, 0.4); padding: 10px; margin-bottom: 20px; border-radius: 20px; border: none;">
+                        style=" background-color: rgba(0, 0, 0, 0.4); padding: 10px; margin-bottom: 20px; border-radius: 20px; border: none; width: 90%;">
 
                         <!-- PYTHON-->
                         <div class="skill" style="width: 95%;">
                             <div class="skill-name"
-                                style="text-align: left; font-weight: normal;  margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px;  white-space: nowrap;">
+                                style="text-align: left; font-weight: normal;  margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px;  white-space: nowrap; padding-top: 15px;">
                                 <p class="connected1" style="text-align: center; color: yellow;">Python - ‎</p>
                                 <p class="connected2" style="color:grey">95%</p>
                             </div>
@@ -320,7 +320,7 @@
                         </div>
 
                         <!-- Lua -->
-                        <div class="skill" style="width: 95%;">
+                        <div class="skill" style="width: 95%; padding-bottom: 15px;">
                             <div class="skill-name"
                                 style="text-align: left; font-weight: normal; margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px;  white-space: nowrap;">
                                 <p class="connected1" style="text-align: center; color: blue;">Lua - ‎</p>
@@ -339,10 +339,10 @@
 
                     <!-- Language Skills -->
                     <div id="skillDIV"
-                        style=" background-color: rgba(0, 0, 0, 0.4); padding: 10px; margin-bottom: 20px; border-radius: 20px; border: none;">
+                        style=" background-color: rgba(0, 0, 0, 0.4); padding: 10px; margin-bottom: 20px; border-radius: 20px; border: none; width: 90%;">
 
                         <!-- Finnish-->
-                        <div class="skill" style="width: 95%;">
+                        <div class="skill" style="width: 95%; padding-top: 15px;">
                             <div class="skill-name"
                                 style="text-align: left; font-weight: normal;  margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px;  white-space: nowrap;">
                                 <p class="connected1" style="text-align: center; color: rgb(20, 87, 255);">Finland - ‎
@@ -374,7 +374,7 @@
                         </div>
 
                         <!-- Swedish -->
-                        <div class="skill" style="width: 95%;">
+                        <div class="skill" style="width: 95%; padding-bottom: 15px;">
                             <div class="skill-name"
                                 style="text-align: left; font-weight: normal;  margin-bottom: -15px; margin-top: -20px; margin-left: 2px; margin-right: 10px;  white-space: nowrap;">
                                 <p class="connected1" style="text-align: center; color: rgb(255, 196, 0);">Swedish - ‎
@@ -392,20 +392,24 @@
                     <div>
                         <p id="game1Link" class="textCenter responsiveTitle">Projects I have programmed in the past:</p>
                         <div id="project1"
-                            style="background-color: rgb(51, 51, 51); border-radius: 20px; padding: 20px;">
-                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli"></a><br>
+                            style="background-color: rgb(51, 51, 51); border-radius: 20px; padding: 20px; padding-top: 0px;">
+                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli" style="text-decoration: none;"><p id="codeSkillTitle" class="textCenter" style="margin-bottom: -20px;">Avaruuspeli:</p></a><br>
                             <img class="gameIMG" onclick="gamePressed(1)" src="../images/games/Avaruuspeli.png"
-                                alt="Avaruuspeli-kuva" width="800px">
+                                alt="Projekti1-kuva" width="800px">
 
 
                         </div>
                         <br>
-                        <div id="project2">
-
+                        <div id="project2" style="background-color: rgb(51, 51, 51); border-radius: 20px; padding: 20px; padding-top: 0px;">
+                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli" style="text-decoration: none;"><p id="codeSkillTitle" class="textCenter" style="margin-bottom: -20px;">Projekti2 - Later:</p></a><br>
+                            <img class="gameIMG" onclick="gamePressed(2)" src=none
+                                alt="Projekti2-kuva" width="800px">
                         </div>
                         <br>
-                        <div id="project3">
-
+                        <div id="project3" style="background-color: rgb(51, 51, 51); border-radius: 20px; padding: 20px; padding-top: 0px;">
+                            <a class="textCenter" href="https://github.com/Arskiz/Avaruuspeli" style="text-decoration: none;"><p id="codeSkillTitle" class="textCenter" style="margin-bottom: -20px;">Projekti3 - Later:</p></a><br>
+                            <img class="gameIMG" onclick="gamePressed(3)" src=none
+                                alt="Projekti3-kuva" width="800px">
                         </div>
                     </div>
                 </div>
@@ -449,9 +453,6 @@
     <!-- Bottom Flexbox (Footer) -->
     <div id="footerText">
         <div style="display: flex; align-items: center; justify-content: center; margin-top: 5px; margin-bottom: 5px;">
-            <div style="position: fixed; left: 1%;" onclick="toggleAudio()">
-                <p id="AudioButton" class="textCenter cantPaintOverText clickable" style="color: rgb(255, 71, 71);">AUDIO</p>
-            </div>
             <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)"
                 style="margin-right: 20px;margin-left: 20px;">
                 <img src="../images/socials/discord.svg" alt="discord-icon" width="40px">
