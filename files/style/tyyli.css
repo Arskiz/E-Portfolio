@@ -663,14 +663,14 @@ label {
 }
 
 .gameIMG {
-    border-radius: 30px;
+    border-radius: 10px;
     transition: all 0.2s
 }
 
 .gameIMG:hover {
     opacity: 80%;
     cursor: pointer;
-    border-radius: 40px;
+    border-radius: 20px;
 }
 
 .infoTitle{
