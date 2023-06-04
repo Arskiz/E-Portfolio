@@ -598,6 +598,7 @@ label {
 }
 
 .collapsible {
+    
     padding-left: 15%;
     padding-right: 15%;
     transition: all 0.3s;
@@ -611,6 +612,7 @@ label {
 
     transition: all display 0.3s;
 }
+
 
 .cantPaintOverText {
     user-select: none;
