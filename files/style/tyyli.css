@@ -842,6 +842,17 @@ label {
 
 }
 
+@media(max-width: 600px){
+    .projectsPast{
+        font-size: 25px;
+    }
+}
+@media(max-width: 514px){
+    .projectsPast{
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 670px) {
 
     #headerTitle,
@@ -921,3 +932,4 @@ label {
     }
 
 }
+
