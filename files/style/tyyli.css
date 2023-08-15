@@ -1,6 +1,6 @@
 /*---------------------------------- Body, ja muut tärkeät jutut ----------------------------------*/
 .E-Portfolio-Body {
-    background: radial-gradient(rgb(0, 238, 255), rgb(119, 0, 255));
+    background: linear-gradient(rgb(0, 238, 255), rgb(0, 119, 255));
 
     transition: all;
     transition-duration: 0.3s;
@@ -31,7 +31,7 @@ header {
     margin-bottom: 5px;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgb(0, 238, 255), rgb(119, 0, 255));
+    background: linear-gradient(rgb(0, 238, 255), rgb(0, 119, 255));
     border-radius: 20px;
     border: 4px solid black;
 }
@@ -39,10 +39,10 @@ header {
 .routeMainTitle {
     color: rgba(255, 255, 255, 0.719);
     text-shadow:
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000;  
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
 }
 
 
@@ -89,10 +89,19 @@ header {
 .connected1 {
     color: rgb(255, 255, 255);
     text-shadow:
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000;  
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+}
+
+.blackAndWhiteText{
+    color: rgb(255, 255, 255);
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
 }
 
 #headerTitle,
@@ -109,7 +118,12 @@ header {
 
 
 .selected {
-    color: rgb(0, 170, 255);
+    color: rgb(255, 255, 255);
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;  
 }
 
 .dropdown {
@@ -155,7 +169,7 @@ header {
 /* Ylä- ja alaosa */
 .flexbox-up-down-container {
     display: flex;
-    text-align: center;
+
 }
 
 /* Vasen ja oikea osa */
@@ -163,7 +177,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    text-align: center;
+
 }
 
 /* Itemit */
@@ -233,10 +247,8 @@ header {
     padding-left: 10px;
     padding-right: 10px;
     font-family: 'Bree Serif';
-    font-size: 22px;
-    font-style: normal;
-    font-size: 20px;
-    color: grey;
+
+
     text-align: left;
 }
 
@@ -342,11 +354,9 @@ header {
     height: 100%;
     color: linear-gradient(rgb(119, 0, 255), rgb(0, 238, 255));
     border-radius: 20px;
-    background: linear-gradient(rgb(119, 0, 255), rgb(0, 238, 255));
-    
-    padding: 5px;
-
-    transition-property: background color border;
+    background: linear-gradient(rgb(0, 140, 255), rgb(0, 47, 255));
+    border: 3px solid black;
+    transition-property: color border;
     transition-duration: 0.2s;
 }
 
@@ -354,40 +364,41 @@ header {
     display: inline-block;
     margin-top: 5px;
     margin-bottom: 5px;
-    background: linear-gradient(rgb(174, 0, 255), rgb(0, 255, 115));
+    background: linear-gradient(rgb(0, 217, 255), rgb(0, 174, 255));
     border-radius: 2px;
-    border: 3px solid black;
+    border: 3px solid rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-shadow:
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000;  
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
     border-radius: 20px;
 }
 
 .headerButton:hover {
-    background: linear-gradient(rgb(119, 0, 255), rgb(0, 238, 255));
+    background: linear-gradient(rgb(0, 174, 255), rgb(0, 102, 255));
     color: rgb(255, 255, 255);
     text-shadow:
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000;  
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
 
     cursor: pointer;
 }
 
 .headerButtonIcon:hover {
     
-    background: linear-gradient(rgb(174, 0, 255), rgb(0, 255, 115));
+    background: linear-gradient(rgb(0, 217, 255), rgb(0, 174, 255));
     color: rgb(255, 255, 255);
     text-shadow:
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000; 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
     cursor: pointer;
+    border: 3px solid white;
 }
 
 #navIconHitbox {
@@ -536,8 +547,9 @@ header {
     right: -0.5%;
     bottom: 0%;
     border-radius: 20px;
-    border-top: 2px solid rgb(65, 65, 65);
-    background-color: rgb(51, 51, 51);
+    border-top: 4px solid rgba(0, 0, 0, 0.8);
+    background: linear-gradient(rgb(0, 153, 255), rgb(0, 238, 255));
+    border-radius: 20px;;
 
     transition: all 0.3s;
 }
@@ -699,10 +711,23 @@ label {
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: rgba(0, 0, 0, 0.2);
-    border: 4px solid black;
+    border: 4px solid rgba(0, 0, 0, 0.5);
     border-radius: 30px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.nextToCategory{
+    padding: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 4px solid rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .hiddenInfoBR {
@@ -752,7 +777,10 @@ label {
 
 .skillDiv{
     background: rgba(0, 0, 0, 0.2);
-    border: 4px solid black;
+    border: 4px solid rgba(0, 0, 0, 0.5)
+}
+.collapsibleNextTo{
+
 }
 
 @media (max-width: 560px) {
@@ -781,7 +809,7 @@ label {
     }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1370px) {
     .nextTo{
         display: flex;
         flex-direction: column;

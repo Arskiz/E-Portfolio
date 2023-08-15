@@ -290,7 +290,7 @@ function loadInputs() {
 function gamePressed(id) {
   const games = {
     1: "Avaruuspeli",
-    2: "COMING SOON",
+    2: "AutoPeli",
     3: "COMING SOON"
   }
 
@@ -299,7 +299,7 @@ function gamePressed(id) {
     if(id === 1)
       redirect("../images/games/Avaruuspeli.png");
     else if (id == 2)
-      redirect("../images/games/Avaruuspeli.png");
+      redirect("../images/games/CarGame.png");
   }
 }
 
