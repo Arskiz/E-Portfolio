@@ -159,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+
 // Collapse's own handling function
 function collapseItem(id, name) {
   // Set up variables

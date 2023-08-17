@@ -5,6 +5,10 @@
     transition: all;
     transition-duration: 0.3s;
 
+    --anim-duration: 600ms;
+    --anim-delay: 0ms;
+
+    --textContent-duration: 600ms;
 }
 
 #transition-fade {
@@ -34,6 +38,12 @@ header {
     background: linear-gradient(rgb(0, 238, 255), rgb(0, 119, 255));
     border-radius: 10px;
     border: 4px solid black;
+    animation-name: header-load;
+    animation-duration: var(--anim-duration);
+    animation-timing-function: ease-in;
+    animation-delay: var(--anim-delay);
+    animation-fill-mode: forwards;
+    transform: translateY(5);
 }
 
 .routeMainTitle {
@@ -324,8 +334,13 @@ header {
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 10px;
-    background: radial-gradient(rgb(119, 0, 255), rgb(0, 238, 255));
-    border: 3px solid black;
+    background: radial-gradient(rgb(119, 0, 255), rgb(0, 195, 255));
+    border: 4px solid black;
+    animation-name: textContent-load;
+    animation-duration: var(--textContent-duration);
+    animation-delay: var(--anim-delay);
+    animation-timing-function: ease-in;
+
 }
 
 .headerItemsMobile {
@@ -781,13 +796,36 @@ label {
 
 .skillDiv{
     background: rgba(0, 0, 0, 0.2);
-    border: 4px solid rgba(0, 0, 0, 0.5);
     margin-left: 15%;
     margin-right: 15%;
 
 }
+
 .collapsibleNextTo{
 
+}
+
+
+@keyframes header-load{
+    0%{
+
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+
+    }
+}
+
+@keyframes textContent-load{
+    0%{
+
+        opacity: 0;
+    }
+    100%{
+
+        opacity: 1;
+    }
 }
 
 @media (max-width: 560px) {
@@ -970,6 +1008,7 @@ label {
     }
 
     .hiddenInfoBR {
+        
         display: flex;
     }
 
