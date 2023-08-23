@@ -420,12 +420,10 @@ header {
 
 @keyframes navigation {
     0%{
-        opacity: 0;
         bottom: 100%;
         left: 100%;
     }
     100%{
-        opacity: 1;
         bottom: 0%;
         left: 0%;
     }
@@ -541,11 +539,9 @@ header {
     left: -0.5%;
     right: -0.5%;
     bottom: 0%;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     border-top: 2px solid rgba(0, 0, 0, 0.8);
     background: rgba(59, 59, 59, 0.9);
-    border-radius: 20px;
-    ;
 
     transition: all 0.3s;
 }
