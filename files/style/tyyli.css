@@ -47,7 +47,7 @@ header {
 }
 
 .routeMainTitle {
-    color: #c7b7b7;
+    color: #ff8787;
     text-shadow:
         -1px -1px 0 #000,
         1px -1px 0 #000,
@@ -419,26 +419,79 @@ header {
 }
 
 @keyframes navigation {
-    0%{
+    0% {
         bottom: 100%;
         left: 100%;
     }
-    100%{
+
+    100% {
         bottom: 0%;
         left: 0%;
     }
 }
 
 @keyframes navigationButton {
-    0%{
+    0% {
         opacity: 0;
     }
-    90%{
+
+    90% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
+}
+
+@keyframes leftCategory {
+    0% {
+        opacity: 0;
+        transform: translateX(-600px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes rightCategory {
+    0% {
+        opacity: 0;
+        transform: translateX(500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.scroll-reveal {
+    opacity: 0;
+    /* Keep it hidden */
+    transform: translateY(20px);
+    /* Just a little surprise */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Smooth reveal */
+}
+
+#aboutMeLeftCategory {
+    animation-name: leftCategory;
+    animation-duration: calc(var(--anim-duration) * 1.5);
+    animation-timing-function: ease-in;
+    animation-delay: var(--anim-delay);
+    animation-fill-mode: forwards;
+}
+
+#aboutMeRightCategory {
+    animation-name: rightCategory;
+    animation-duration: calc(var(--anim-duration) * 1.5);
+    animation-timing-function: ease-in;
+    animation-delay: var(--anim-delay);
+    animation-fill-mode: forwards;
+
 }
 
 #MobNavTitle {
@@ -480,7 +533,7 @@ header {
     position: fixed;
     left: calc(0% + 10px);
     right: calc(0% + 10px);
-    
+
     animation-name: navigationButton;
     animation-duration: var(--anim-duration);
     animation-timing-function: ease-in;
@@ -693,10 +746,12 @@ label {
 .nextTo {
     display: flex;
     flex-direction: row;
-
+    width: 100%;
+    justify-content: center;
 }
 
 .infoCategory {
+    width: 100%;
     padding: 15px;
     padding-left: 5%;
     padding-right: 5%;
@@ -710,17 +765,13 @@ label {
 }
 
 .nextToCategory {
-    padding: 15px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 1%;
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: rgba(0, 0, 0, 0.2);
-    border: 4px solid rgba(0, 0, 0, 0.5);
-    border-radius: 30px;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin: 0.5%;
 }
+
 
 .hiddenInfoBR {
     display: none;
@@ -775,7 +826,7 @@ label {
 }
 
 .headerButtonText {
-    transition: all 0.3s;
+    transition: all 0.1s;
 }
 
 #footerName {
@@ -829,7 +880,7 @@ label {
         font-size: 20px;
     }
 
-    
+
 
     .collapsible {
         padding-left: 5%;
@@ -914,17 +965,8 @@ label {
 }
 
 @media (max-width: 950px) {
-    #iconHeader {
-        display: none;
-    }
 
-    #buttonHeader {
-        display: none;
-    }
 
-    .headerItemsMobile {
-        display: flex;
-    }
 
     .gameIMG {
         width: 600px;
@@ -932,6 +974,24 @@ label {
 
 
 }
+
+@media (max-width: 925px) {
+
+    #headerTitle,
+    #headerMainTitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    #headerTitle,
+    #headerMainTitle {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 70px) {}
 
 @media (max-width: 800px) {
 
@@ -962,9 +1022,17 @@ label {
 
 }
 
-@media(max-width: 600px) {
+@media(max-width: 690px) {
     .projectsPast {
         font-size: 25px;
+    }
+
+    #buttonHeader {
+        display: none;
+    }
+
+    .headerItemsMobile {
+        display: flex;
     }
 }
 
@@ -1011,7 +1079,7 @@ label {
     }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 455px) {
     .gameIMG {
         width: 300px;
     }
@@ -1056,9 +1124,23 @@ label {
 
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
     .nextTo {
         display: flex;
         flex-direction: column;
+    }
+    #aboutMeLeftCategory{
+        border-radius:  20px 20px 0px 0px;
+    }
+    #aboutMeRightCategory{
+        border-radius:  0px 0px 20px 20px;
+    }
+}
+@media (min-width: 1000px) {
+    #aboutMeRightCategory{
+        border-radius:  0px  20px 20px 0px;
+    }
+    #aboutMeLeftCategory{
+        border-radius:  20px  0px 0px 20px;
     }
 }

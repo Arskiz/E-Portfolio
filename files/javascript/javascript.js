@@ -77,15 +77,14 @@ function goToHTML(id) {
     3: "professions",
     4: "contact-me"
   }
-  
+
   // Check if id is in windows-const
-  if(id in windows){
+  if (id in windows) {
     window.location.href = windows[id] + end;
   }
 
   // If it isn't, navigate to Home
-  else
-  {
+  else {
     window.location.href = "home" + end;
   }
 }
@@ -176,7 +175,7 @@ function collapseItem(id, name) {
       currentCollapse.style.maxHeight = currentCollapse.scrollHeight + "px"; // Set the max-height to the element's scroll height
       currentCollapse.classList.add("collapsing"); // Add collapsing class for smooth animation
 
-      setTimeout(function() {
+      setTimeout(function () {
         currentCollapse.style.maxHeight = null; // Remove the max-height to allow content to expand
         currentCollapse.style.opacity = "1";
       }, 200); // Adjust the delay to match the transition duration
@@ -188,11 +187,11 @@ function collapseItem(id, name) {
       currentCollapse.style.maxHeight = currentCollapse.scrollHeight + "px"; // Set the max-height to the element's scroll height before collapsing
       currentCollapse.classList.add("collapsing"); // Add collapsing class for smooth animation
 
-      setTimeout(function() {
+      setTimeout(function () {
         currentCollapse.style.maxHeight = "0"; // Set the max-height to 0 to collapse the element
         currentCollapse.style.opacity = "0";
       }, 10); // Adjust the delay to allow the content to expand before collapsing
-      
+
       if (useCollapseMarks) {
         currentCollapseText.innerHTML = closedCollapseMark1 + name + closedCollapseMark2;
       }
@@ -250,7 +249,7 @@ function pressedSocials(id) {
     } else if (id === 3) {
       alert("Add me on Discord: " + social);
     }
-  // If it isn't, alert that the id isn't supported
+    // If it isn't, alert that the id isn't supported
   } else {
     alert("Unsupported ID!");
   }
@@ -297,19 +296,19 @@ function gamePressed(id) {
 
   // If the id is in the games-list
   if (id in games) {
-    if(id === 1)
+    if (id === 1)
       redirect("../images/games/Avaruuspeli.png");
     else if (id == 2)
       redirect("../images/games/CarGame.png");
   }
 }
 
-function redirect(site){
+function redirect(site) {
   window.location.href = site;
 }
 
 // Send contact-me's input fields to me:
-function submitFile(){
+function submitFile() {
   // Set-up variables
   const firstName = document.getElementById("firstName").value;
   const lastName = document.getElementById("lastName").value;
@@ -326,10 +325,10 @@ function submitFile(){
 
   // Send the values to me, (possibly later with PHP)
   localStorage.setItem("sentPackage", JSON.stringify(package));
-  if(localStorage.getItem("sentPackage") !== null){
+  if (localStorage.getItem("sentPackage") !== null) {
     console.log("Sent!");
     alert(
-    ` 
+      ` 
     Entered Values:
     -------------------
     First Name: ${firstName}
@@ -339,18 +338,17 @@ function submitFile(){
     -------------------
     You will be redirected to Your Commonly Used E-mail Website now.
     `);
-    
+
     // Redirect to Google Mail with the input fields already filled
     const subject = `${firstName} ${lastName} - Contact Request`;
-    const body = 
-`Full Name: ${firstName} ${lastName}
+    const body =
+      `Full Name: ${firstName} ${lastName}
 Email: ${email}
 
 ${message}`;
     window.location.href = `mailto:aronsarkioja7@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
-  else
-  {
+  else {
     alert("Something went wrong with sending the package...");
     console.log("Something went wrong with sending the package...");
   }
@@ -360,11 +358,10 @@ var audio; // Declare the audio variable globally
 
 // Background sound player:
 function playSound(soundUrl) {
-  if(audio){
+  if (audio) {
     audio.play();
   }
-  else
-  {
+  else {
     audio = new Audio(soundUrl);
     audio.play();
   }
@@ -378,8 +375,30 @@ function stopSound() {
 }
 
 // Set Audio Volume
-function setAudioVolume(amount){
-  if(audio) {
+function setAudioVolume(amount) {
+  if (audio) {
     audio.volume = amount;
   }
 }
+
+const revealElements = document.querySelectorAll('.scroll-reveal');
+
+  function isElementInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= window.innerHeight && rect.bottom >= 0
+    );
+  }
+
+  function handleScroll() {
+    revealElements.forEach(element => {
+      if (isElementInViewport(element)) {
+        element.style.opacity = 1;
+        element.style.transform = 'translateY(0)';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  // Initial check in case element is already in view on page load
+  handleScroll();
