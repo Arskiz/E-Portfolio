@@ -294,7 +294,7 @@ header {
     width: 300px;
     border-radius: 20px;
     transition: all 0.2s;
-
+    opacity: 0.5;
 }
 
 .insideCyanDiv {
@@ -308,6 +308,7 @@ header {
 .textContent {
     padding-top: 5px;
     padding-bottom: 5px;
+    
     background: rgba(0, 0, 0, 0.2);
     animation-name: textContent-load;
     transform: translateY(-5);
@@ -606,7 +607,7 @@ header {
     bottom: 0%;
     border-radius: 20px 20px 0 0;
     border-top: 2px solid rgba(0, 0, 0, 0.8);
-    background: rgba(59, 59, 59, 0.9);
+    background: rgba(20, 20, 20, 0.7);
 
     transition: all 0.3s;
 }
@@ -756,6 +757,7 @@ label {
 
 #picOfMe:hover {
     border-radius: 30px;
+    opacity: 0.8;
 }
 
 .nextTo {
@@ -785,6 +787,7 @@ label {
     margin-bottom: 5px;
     background-color: rgba(0, 0, 0, 0.2);
     margin: 0.5%;
+    border-radius: 10px;
 }
 
 
@@ -1077,6 +1080,17 @@ label {
     .gameIMG {
         width: 400px;
     }
+
+    .textContent{
+        padding-right: 0%;
+        padding-left: 0%;
+    }
+}
+@media (min-width: 1200px){
+    .textContent{
+        padding-right: 15%;
+        padding-left: 15%;
+    }
 }
 
 @media (max-width: 650px) {
@@ -1155,6 +1169,11 @@ label {
         align-items: center;
         justify-content: center;
     }
+    #aboutMeRightCategoryTexts{
+        text-align: center;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 
 }
 
@@ -1168,5 +1187,8 @@ label {
     .nextToCategoryAboutMe{
         display: flex;
         justify-content: center;
+    }
+    #aboutMeRightCategoryTexts{
+        text-align: left;
     }
 }
