@@ -346,7 +346,8 @@ header {
     display: inline-block;
     margin-top: 5px;
     margin-bottom: 5px;
-    color: rgb(163, 0, 0);
+    font-size: 17px;
+    color: rgb(207, 44, 44);
 }
 
 .headerButton:hover {
@@ -365,6 +366,9 @@ header {
     transition-property: all;
     transition-duration: 0.5s;
 }
+#navIconHitbox:hover{
+    cursor: pointer;
+}
 
 .hr {
     height: 2px;
@@ -379,6 +383,7 @@ header {
     top: calc(0.1%);
     right: calc(1.9%);
 }
+
 
 #exitButton {
     display: inline-block;
@@ -400,6 +405,7 @@ header {
 
 
 #exitButton:hover {
+    cursor: pointer;
     background-color: rgba(64, 64, 64, 0.8);
 }
 
@@ -529,6 +535,7 @@ header {
 }
 
 #buttonDiv:hover {
+    cursor: pointer;
     background-color: rgba(43, 43, 43, 0.9);
     transition-property: background-color;
     transition-duration: 0.2s;
@@ -838,8 +845,8 @@ label {
 
 .skillDiv {
     background: rgba(0, 0, 0, 0.2);
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
 
 }
 
@@ -1052,6 +1059,10 @@ label {
     .headerItemsMobile {
         display: flex;
     }
+    #headerTitle,
+    #headerMainTitle {
+        font-size: 30px;
+    }
 }
 
 @media(max-width: 514px) {
@@ -1062,10 +1073,6 @@ label {
 
 @media (max-width: 670px) {
 
-    #headerTitle,
-    #headerMainTitle {
-        font-size: 30px;
-    }
 
     #codeSkillTitle,
     .responsiveTitle:not(#socials) {

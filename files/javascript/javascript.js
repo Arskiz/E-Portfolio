@@ -231,7 +231,7 @@ function pressedSocials(id) {
     1: "https://github.com/Arskiz",         // Github
     2: "mailto:aronsarkioja7@gmail.com",  // Email's url
     3: "Arskiz#3257",                       // Discord
-    4: "+358 400 291 062",                  // Phone
+    4: "(+358) 400 291 062",                  // Phone
     5: "aronsarkioja7@gmail.com"            // Email
   };
 
@@ -242,10 +242,10 @@ function pressedSocials(id) {
       window.location.href = social;
     }
     if (id === 2) {
-      alert("Press `OK` to get redirected to Google Mail: " + socials[5] + "!");
+      alert("You are now being redirected to Google Mail: " + socials[5] + "!");
       window.location.href = social;
     } else if (id === 4) {
-      alert("Add me on WhatsApp/Telegram or send me a message to this number: " + social);
+      alert("WhatsApp/Telegram: " + social);
     } else if (id === 3) {
       alert("Add me on Discord: " + social);
     }
