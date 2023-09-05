@@ -1008,7 +1008,7 @@ label {
     }
 }
 
-@media (max-width: 775px) {
+@media (max-width: 790px) {
 
     #headerTitle,
     #headerMainTitle {
@@ -1047,7 +1047,7 @@ label {
 
 }
 
-@media(max-width: 710px) {
+@media(max-width: 720px) {
     .projectsPast {
         font-size: 25px;
     }
