@@ -819,7 +819,7 @@ label {
 }
 
 .infoTitle {
-    color: rgba(255, 0, 0, 0.6);
+    color:chartreuse;
     text-shadow:
         -1px -1px 0 #000,
         1px -1px 0 #000,
