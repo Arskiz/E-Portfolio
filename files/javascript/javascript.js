@@ -291,7 +291,8 @@ function gamePressed(id) {
   const games = {
     1: "Avaruuspeli",
     2: "AutoPeli",
-    3: "COMING SOON"
+    3: "PyTerminal1",
+    4: "PyTerminal2"
   }
 
   // If the id is in the games-list
@@ -300,6 +301,10 @@ function gamePressed(id) {
       redirect("../images/games/Avaruuspeli.png");
     else if (id == 2)
       redirect("../images/games/CarGame.png");
+    else if(id == 3)
+      redirect("../images/games/ticTacToe.png");
+      else if(id == 4)
+      redirect("../images/games/scrambler.png");
   }
 }
 
