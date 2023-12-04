@@ -230,7 +230,7 @@ function pressedSocials(id) {
   const socials = {
     1: "https://github.com/Arskiz",         // Github
     2: "mailto:aronsarkioja7@gmail.com",  // Email's url
-    3: "Arskiz#3257",                       // Discord
+    3: "arskiz",                       // Discord
     4: "(+358) 400 291 062",                  // Phone
     5: "aronsarkioja7@gmail.com"            // Email
   };
@@ -247,7 +247,7 @@ function pressedSocials(id) {
     } else if (id === 4) {
       alert("WhatsApp/Telegram: " + social);
     } else if (id === 3) {
-      alert("Add me on Discord: " + social);
+      alert("Add me on Discord, (nowadays no id required): " + social);
     }
     // If it isn't, alert that the id isn't supported
   } else {
