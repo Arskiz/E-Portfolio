@@ -7,38 +7,6 @@ let footerOpened = null;
 const footerNameText = "Särkioja Aron 2023 ©";
 const headerNameText = "Särkioja Aron";
 
-// Collapses (Syntax example: "11" = 1_1 = html1 - collapse 1)
-var collapses = {
-  // Collapses (HOME PAGE)
-  collapse11: true,
-  collapse12: true,
-  collapse13: true,
-  collapse14: true,
-  collapse15: true,
-
-  // Collapses (ABOUT ME PAGE)
-  collapse21: true,
-
-  // Collapses (KNOWLEDGE PAGE)
-  collapse31: true,
-  collapse32: true,
-  collapse33: true,
-
-  // Collapses (PROFESSIONS PAGE)
-  collapse41: true,
-  collapse42: true,
-  collapse43: true,
-  collapse44: true,
-};
-
-
-let openedCollapseMark = "v";
-let closedCollapseMark1 = "< ";
-let closedCollapseMark2 = " >";
-const useCollapseMarks = false;
-
-
-
 let originalText = null;
 
 // Open-Close for mobile navigation menu
@@ -159,50 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Collapse's own handling function
-function collapseItem(id, name) {
-  // Set up variables
-  const togglerText = "collapse" + id + "MainToggler";
-  const div = "collapse" + id;
 
-  // Find the variables from the document
-  const currentCollapse = document.getElementById(div);
-  const currentCollapseText = document.getElementById(togglerText);
-
-  if (currentCollapse && currentCollapseText) {
-    // Boolean check for the collapse
-    if (collapses["collapse" + id] !== true) {
-      currentCollapse.style.maxHeight = currentCollapse.scrollHeight + "px"; // Set the max-height to the element's scroll height
-      currentCollapse.classList.add("collapsing"); // Add collapsing class for smooth animation
-
-      setTimeout(function () {
-        currentCollapse.style.maxHeight = null; // Remove the max-height to allow content to expand
-        currentCollapse.style.opacity = "1";
-      }, 200); // Adjust the delay to match the transition duration
-
-      if (useCollapseMarks) {
-        currentCollapseText.innerHTML = openedCollapseMark + " " + name + " " + openedCollapseMark;
-      }
-    } else {
-      currentCollapse.style.maxHeight = currentCollapse.scrollHeight + "px"; // Set the max-height to the element's scroll height before collapsing
-      currentCollapse.classList.add("collapsing"); // Add collapsing class for smooth animation
-
-      setTimeout(function () {
-        currentCollapse.style.maxHeight = "0"; // Set the max-height to 0 to collapse the element
-        currentCollapse.style.opacity = "0";
-      }, 10); // Adjust the delay to allow the content to expand before collapsing
-
-      if (useCollapseMarks) {
-        currentCollapseText.innerHTML = closedCollapseMark1 + name + closedCollapseMark2;
-      }
-    }
-
-    console.log(collapses);
-    collapses["collapse" + id] = !collapses["collapse" + id];
-  } else {
-    console.log("Element with id", div, "or", togglerText, "not found. Look for them in HTML.");
-  }
-}
 
 // Handle footer's open and close
 function footerCloseOpen() {
@@ -358,52 +283,3 @@ ${message}`;
     console.log("Something went wrong with sending the package...");
   }
 }
-
-var audio; // Declare the audio variable globally
-
-// Background sound player:
-function playSound(soundUrl) {
-  if (audio) {
-    audio.play();
-  }
-  else {
-    audio = new Audio(soundUrl);
-    audio.play();
-  }
-}
-
-// Background sound stopper:
-function stopSound() {
-  if (audio) {
-    audio.pause();
-  }
-}
-
-// Set Audio Volume
-function setAudioVolume(amount) {
-  if (audio) {
-    audio.volume = amount;
-  }
-}
-
-const revealElements = document.querySelectorAll('.scroll-reveal');
-
-  function isElementInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top <= window.innerHeight && rect.bottom >= 0
-    );
-  }
-
-  function handleScroll() {
-    revealElements.forEach(element => {
-      if (isElementInViewport(element)) {
-        element.style.opacity = 1;
-        element.style.transform = 'translateY(0)';
-      }
-    });
-  }
-
-  window.addEventListener('scroll', handleScroll);
-  // Initial check in case element is already in view on page load
-  handleScroll();

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/tyyli.css">
+    <link rel="icon" type="image/x-icon" href="../images/others/favicon.png">
     <link href='https://fonts.googleapis.com/css?family=Bree Serif' rel='stylesheet'>
     <title>Contact Me, Aron Särkioja</title>
 </head>
@@ -59,7 +60,7 @@
 
     <!-- Text Area (Center Flexbox)  -->
     <div class="flex-middle-item left-right-item-middle" style="background-color: transparent;">
-        <div class="textContent">
+        <div class="textContent" id="MainContent">
             <p class="textCenter contactMeTitle cantPaintOverText"
                 style="color: orange; font-size: 30px; font-weight: bold;  font-family: Arial, Helvetica, sans-serif;">
                 You can contact me using the following options:</p>
@@ -96,7 +97,7 @@
                 <p class="textCenter responsiveTitle cantPaintOverText" style="color: red;" id="socials"> OR </p>
                 <div id="buttonDivContactME" display="normal">
                     <p class="textCenter responsiveTitle cantPaintOverText" style="color: rgb(91, 156, 255);">Use the following buttons:</p>
-                    <div style="background-color: rgba(46, 46, 46, 0.4); border-radius: 20px; padding: 20px;">
+                    <div id="innerButtonContactMeDiv" style="background-color: rgba(46, 46, 46, 0.4); border-radius: 20px; padding: 20px;">
                         <div style="display: flex; justify-content: center; align-items: center;">
                             <img src="../images/socials/phone-call-icon.svg" width="50px" alt="phone-logo">
                             <p class="textCenter responsiveTitle contact-me-item cantPaintOverText" onclick="pressedSocials(4)"
@@ -159,7 +160,7 @@
         <div style="display: flex; align-items: center; justify-content: center; margin-top: 5px; margin-bottom: 5px;">
             <div id="discordHitbox" class="clickable" onclick="pressedSocials(3)"
                 style="margin-right: 20px;margin-left: 20px;">
-                <img src="../images/socials/discord.svg" alt="discord-icon" width="40px">
+                <img src="../images/socials/discord.png" alt="discord-icon" width="40px">
             </div>
 
 
