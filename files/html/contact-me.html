@@ -68,47 +68,47 @@
                 <div style="padding-right: 2%;" id="contact-me-form-div">
                     <p id="socials" class="textCenter responsiveTitle cantPaintOverText" style="color: rgb(91, 156, 255);">Send an e-mail:</p>
                     <form class="contactMeForm textLeft"
-                        style="color: rgba(92, 92, 92, 0.4); font-family: Arial, Helvetica, sans-serif;" method="POST"
+                        style="border: 5px solid black;" method="POST"
                         action="">
                         <div class="form-row">
-                            <label for="firstName">First Name:</label>
+                            <label style="color: black; font-weight: 700;" for="firstName">First Name:</label>
                             <input class="formInput" type="text" id="firstName" name="firstName" required>
                         </div>
                         <div class="form-row">
-                            <label for="lastName">Last Name:</label>
+                            <label style="color: black; font-weight: 700;" for="lastName">Last Name:</label>
                             <input class="formInput" type="text" id="lastName" name="lastName" required>
                         </div>
                         <div class="form-row">
-                            <label for="email">Email:</label>
+                            <label style="color: black; font-weight: 700;" for="email">Email:</label>
                             <input class="formInput" type="email" id="email" name="email" required>
                         </div>
                         <div class="form-row">
-                            <label for="message">Message:</label>
-                            <textarea class="formInput" id="message" name="message" rows="4" required></textarea>
+                            <label style="color: black; font-weight: 700;" for="message">Message:</label>
+                            <textarea class="formInput" id="message" name="message" rows="4" style="color: black; font-weight: 700;" required></textarea>
                         </div>
                         <div class="form-row">
-                            <input type="button" class="formButton" onclick="saveInputs()" value="Save Inputs">
+                            <input type="button" class="formButton" onclick="saveInputs()" style="color: black; font-weight: 700;" value="Save Inputs">
                         </div>
                         <div class="form-row">
-                            <input type="button" class="formButton" value="Submit" onclick="submitFile()">
+                            <input type="button" class="formButton" style="color: black; font-weight: 700;" value="Submit" onclick="submitFile()">
                         </div>
                     </form>
                 </div>
                 <p class="textCenter responsiveTitle cantPaintOverText" style="color: red;" id="socials"> OR </p>
                 <div id="buttonDivContactME" display="normal">
                     <p class="textCenter responsiveTitle cantPaintOverText" style="color: rgb(91, 156, 255);">Use the following buttons:</p>
-                    <div id="innerButtonContactMeDiv" style="background-color: rgba(46, 46, 46, 0.4); border-radius: 20px; padding: 20px;">
+                    <div id="innerButtonContactMeDiv" style="border: 5px solid black; border-radius: 20px; padding: 20px;">
                         <div style="display: flex; justify-content: center; align-items: center;">
                             <img src="../images/socials/phone-call-icon.svg" width="50px" alt="phone-logo">
                             <p class="textCenter responsiveTitle contact-me-item cantPaintOverText" onclick="pressedSocials(4)"
-                                style="color: green;" id="socials">
+                                style="color: black" id="socials">
                                 Phone
                             </p>
                         </div>
                         <div style="display: flex; justify-content: center; align-items: center;">
                             <img src="../images/socials/discord.png" width="50px" alt="phone-logo">
                             <p class="textCenter responsiveTitle contact-me-item cantPaintOverText" onclick="pressedSocials(3)"
-                            style="color: rgb(73, 73, 255);" id="socials">
+                            style="color: black" id="socials">
                             Discord
                         </p>
                         </div>

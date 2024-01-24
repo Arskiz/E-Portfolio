@@ -638,6 +638,7 @@ header {
 }
 
 #innerButtonContactMeDiv{
+    background-color: #ff0000;
     box-shadow: 0px 0px 20px #ff0000;
     border-top: 3px solid #ff0000;
     border-bottom: 3px solid #ff0000;
@@ -647,7 +648,7 @@ header {
     box-shadow: 0px 0px 20px #51ff00;
     border-top: 3px solid #51ff00;
     border-bottom: 3px solid #51ff00;
-    background-color: rgba(46, 46, 46, 0.4);
+    background-color: rgb(0, 255, 13);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -872,6 +873,7 @@ label {
     margin: 0.5%;
     border-radius: 10px;
     box-shadow: 2px 2px 10px chartreuse;
+    transition: all 0.5s;
 }
 
 
@@ -1009,6 +1011,31 @@ label {
     }
 }
 
+.revealY{
+    transition: all 0.7s ease;
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+}
+
+.revealX{
+    transition: all 0.7s ease;
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+}
+
+.revealX.activeFromSide{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.revealY.activeFromBottom{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
 
 @media (max-width: 1370px) {
     .headerTitle {
@@ -1056,10 +1083,12 @@ label {
     }
 
     .textCenter {
+        transition: all 0.5s;
         flex-direction: column;
         align-items: center;
 
     }
+
 
     #iconHeader {
         display: flex;
@@ -1215,6 +1244,9 @@ label {
 
     #picOfMe {
         width: 250px;
+    }
+    #collapse33MainToggler{
+        font-size: 20px;
     }
 }
 

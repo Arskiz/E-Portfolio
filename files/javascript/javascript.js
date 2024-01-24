@@ -33,6 +33,39 @@ function navOpenClose() {
   isOpened = !isOpened;
 }
 
+// Elements come visible on scroll
+window.addEventListener('scroll', reveal);
+function reveal(){
+  var revealsY = document.querySelectorAll('.revealY');
+  var revealsX = document.querySelectorAll('.revealX');
+
+  for(var i = 0; i < revealsY.length; i++){
+    var windowHeight = window.innerHeight;
+    var revealTop = revealsY[i].getBoundingClientRect().top;
+    var revealPoint = 1;
+
+    if(revealTop < windowHeight - revealPoint){
+      revealsY[i].classList.add('activeFromBottom');
+    }
+    else{
+      revealsY[i].classList.remove('activeFromBottom');
+    }
+  }
+
+  for(var i = 0; i < revealsX.length; i++){
+    var windowHeight = window.innerHeight;
+    var revealTop = revealsX[i].getBoundingClientRect().top;
+    var revealPoint = 1;
+
+    if(revealTop < windowHeight - revealPoint){
+      revealsX[i].classList.add('activeFromSide');
+    }
+    else{
+      revealsX[i].classList.remove('activeFromSide');
+    }
+  }
+}
+
 // Navigate to a html-document by id
 function goToHTML(id) {
   // File end type
